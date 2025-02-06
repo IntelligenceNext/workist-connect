@@ -7,46 +7,46 @@ const newsItems = [
   {
     id: 1,
     title: "INFOGRAPHIC: What is the True Cost of Hiring?",
-    image: "https://insightglobal.com/wp-content/uploads/2024/08/What-is-the-True-Cost-of-Hiring-1.png",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
     author: {
       name: "Emilie Skaug",
-      avatar: "https://insightglobal.com/wp-content/uploads/2024/08/about-me-picture-e1722610903938-150x150.jpg"
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&h=150"
     },
     excerpt: "Learn more about the true cost of hiring as we provide a detailed breakdown of our infographic, which discusses hard and soft costs while providing tips on mitigating these expenses.",
-    link: "https://insightglobal.com/blog/true-cost-of-hiring/"
+    link: "/blog/true-cost-of-hiring/"
   },
   {
     id: 2,
     title: "Staffing vs. Talent Solutions: Which is Right for You?",
-    image: "https://insightglobal.com/wp-content/uploads/2024/07/Blog-Cover-Icon-no-Text-1-2.png",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     author: {
       name: "Anna Morelock",
-      avatar: "https://insightglobal.com/wp-content/uploads/2023/01/author-150x150.jpg"
+      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150"
     },
-    excerpt: "Recruiting, hiring, productivity, and retention are challenges every business faces. A staffing agency like Insight Global can help with all of them. The right approach depends on where your organization…",
-    link: "https://insightglobal.com/blog/staffing-vs-talent-solutions/"
+    excerpt: "Recruiting, hiring, productivity, and retention are challenges every business faces. A staffing agency like Workist For IT can help with all of them. The right approach depends on where your organization…",
+    link: "/blog/staffing-vs-talent-solutions/"
   },
   {
     id: 3,
     title: "How to Find Employees: The Complete Guide",
-    image: "https://insightglobal.com/wp-content/uploads/2023/09/find-employee-guide-cover-3.png",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
     author: {
       name: "Patrick Glynn",
-      avatar: "https://insightglobal.com/wp-content/uploads/2024/12/IGLogoPFP.png"
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150"
     },
     excerpt: "With over 20 years in staffing, we've compiled tips and tricks to guide you on how to find the best employees for your business!",
-    link: "https://insightglobal.com/guide/finding-employees-for-your-business/"
+    link: "/guide/finding-employees-for-your-business/"
   },
   {
     id: 4,
-    title: "Insight Global Recognized as 5th Largest US Staffing Firm in 2024",
-    image: "https://insightglobal.com/wp-content/uploads/2024/07/Blog-Cover.png",
+    title: "Workist For IT Recognized as Leading IT Staffing Firm in 2024",
+    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
     author: {
       name: "Charlotte Pinckney",
-      avatar: "https://insightglobal.com/wp-content/uploads/2021/11/logo.png"
+      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&h=150"
     },
-    excerpt: "The Atlanta-based firm continues to grow despite a challenging year for the staffing industry. Atlanta, GA – July 16, 2024 – Insight Global, an international staffing and professional services provider,…",
-    link: "https://insightglobal.com/press-release/insight-global-recognized-as-5th-largest-us-staffing-firm-in-2024/"
+    excerpt: "The tech-focused firm continues to grow despite a challenging year for the IT staffing industry. Workist For IT, a leading IT staffing and professional services provider, has been recognized...",
+    link: "/press-release/workist-for-it-recognized-2024/"
   }
 ];
 
