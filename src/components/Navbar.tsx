@@ -14,12 +14,16 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50">
+    <nav className="bg-[#040842] shadow-md fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <a href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-primary">Workist</span>
+              <img 
+                src="https://workistforit.in/images/logo.png" 
+                alt="Workist Logo" 
+                className="h-8 w-auto"
+              />
             </a>
           </div>
 
@@ -29,7 +33,7 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 {item.name}
               </a>
@@ -41,7 +45,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-primary focus:outline-none"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -57,7 +61,7 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+                className="text-white hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
               >
                 {item.name}
               </a>
