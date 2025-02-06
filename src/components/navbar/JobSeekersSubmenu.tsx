@@ -11,7 +11,7 @@ interface JobSeekersSubmenuProps {
 
 const JobSeekersSubmenu = ({ jobSeekerLinks }: JobSeekersSubmenuProps) => {
   return (
-    <div className="grid grid-cols-2 gap-4 p-6 pr-[5%]">
+    <div className="bg-[#001B3D] grid grid-cols-2 gap-4 p-6 pr-[5%]">
       {jobSeekerLinks.map((link) => (
         <a
           key={link.name}
