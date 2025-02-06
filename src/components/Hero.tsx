@@ -1,9 +1,46 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [bubbles] = useState([
+    { id: 1, size: 100 },
+    { id: 2, size: 80 },
+    { id: 3, size: 120 },
+    { id: 4, size: 90 },
+  ]);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   return (
-    <div className="relative min-h-[600px] w-full bg-[#293a4c] py-28 px-4">
+    <div className="relative min-h-[600px] w-full bg-[#293a4c] py-28 px-4 overflow-hidden">
+      {/* Bubble Navigation */}
+      {bubbles.map((bubble) => (
+        <div
+          key={bubble.id}
+          className="absolute rounded-full bg-primary/20 backdrop-blur-sm transition-all duration-300 pointer-events-none"
+          style={{
+            width: `${bubble.size}px`,
+            height: `${bubble.size}px`,
+            transform: `translate(${
+              (mousePosition.x / window.innerWidth) * 30 - 15
+            }px, ${
+              (mousePosition.y / window.innerHeight) * 30 - 15
+            }px)`,
+            left: `${(bubble.id * 25) - 10}%`,
+            top: `${((bubble.id % 2) * 40) + 20}%`,
+          }}
+        />
+      ))}
+
       {/* Background Image */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center opacity-90"
@@ -55,8 +92,6 @@ const Hero = () => {
           <div className="mt-24 text-center">
             <p className="text-white/80 mb-8 text-sm uppercase tracking-wider">Trusted By</p>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
-              {/* Add company logos here */}
-              {/* For now using placeholder divs */}
               {[1, 2, 3, 4, 5].map((i) => (
                 <div key={i} className="h-12 bg-white/10 rounded animate-pulse" />
               ))}
