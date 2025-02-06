@@ -173,8 +173,8 @@ const StaffingServices = () => {
 
               <div>
                 <img
-                  src="https://workistforit.in/images/desktop-candidates.png"
-                  alt="Desktop with candidates interface"
+                  src="/placeholder.svg"
+                  alt="Desktop interface showing candidate management"
                   className="w-full h-auto rounded-lg shadow-xl"
                   loading="lazy"
                 />
