@@ -58,9 +58,10 @@ const Hero = () => {
       <div className="relative z-20 max-w-7xl mx-auto">
         <div className="max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
-            Connecting you to <span className="text-primary">top talent</span> across all industries
+            Connecting you to <span className="text-[#e1691A]">top talent</span> across all industries
           </h1>
 
+          {/* Job Seekers and Businesses sections */}
           <div className="grid md:grid-cols-2 gap-8 mt-12">
             {/* Job Seekers */}
             <div className="bg-black/20 p-8 rounded-lg backdrop-blur-sm">
