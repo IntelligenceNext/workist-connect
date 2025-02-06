@@ -26,17 +26,18 @@ const Hero = () => {
       {bubbles.map((bubble) => (
         <div
           key={bubble.id}
-          className="absolute rounded-full bg-primary/20 backdrop-blur-sm transition-all duration-300 pointer-events-none"
+          className="absolute rounded-full bg-primary/20 backdrop-blur-sm transition-all duration-700 ease-out hover:bg-primary/30 animate-float pointer-events-none"
           style={{
             width: `${bubble.size}px`,
             height: `${bubble.size}px`,
             transform: `translate(${
-              (mousePosition.x / window.innerWidth) * 30 - 15
+              (mousePosition.x / window.innerWidth) * 50 - 25
             }px, ${
-              (mousePosition.y / window.innerHeight) * 30 - 15
-            }px)`,
+              (mousePosition.y / window.innerHeight) * 50 - 25
+            }px) scale(${1 + Math.sin(Date.now() / 1000) * 0.1})`,
             left: `${(bubble.id * 25) - 10}%`,
             top: `${((bubble.id % 2) * 40) + 20}%`,
+            animation: `float-${bubble.id} ${3 + bubble.id}s ease-in-out infinite`,
           }}
         />
       ))}
