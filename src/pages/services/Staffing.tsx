@@ -45,11 +45,7 @@ const StaffingServices = () => {
                 <h1 className="text-4xl font-bold mb-6">
                   Staffing Agency Services
                 </h1>
-                <img 
-                  src="https://insightglobal.com/wp-content/uploads/2024/11/IGDotsSmall.png"
-                  alt="Decorative dots"
-                  className="w-[70px] h-auto"
-                />
+                <div className="w-32 h-2 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full" />
               </div>
 
               {/* Schedule Meeting Column */}
