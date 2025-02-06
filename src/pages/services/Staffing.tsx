@@ -189,6 +189,15 @@ const StaffingServices = () => {
             <h2 className="text-3xl font-bold text-center mb-12" id="h-staffing-all-industries-amp-functions">
               Staffing All Industries &amp; Functions
             </h2>
+            <p className="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+              While we take pride in finding qualified candidates for each and every open position, these are some of the{" "}
+              <strong>
+                <a href="/industries" className="text-primary hover:text-primary/80 transition-colors">
+                  industries and functions
+                </a>
+              </strong>{" "}
+              where our staffing agency really knows the ropes.
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-semibold mb-4">Technology</h3>
