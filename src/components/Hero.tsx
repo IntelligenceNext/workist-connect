@@ -5,10 +5,12 @@ import { useEffect, useState } from "react";
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [bubbles] = useState([
-    { id: 1, size: 100 },
-    { id: 2, size: 80 },
-    { id: 3, size: 120 },
-    { id: 4, size: 90 },
+    { id: 1, size: 100, opacity: 0.2 },
+    { id: 2, size: 80, opacity: 0.15 },
+    { id: 3, size: 120, opacity: 0.25 },
+    { id: 4, size: 90, opacity: 0.2 },
+    { id: 5, size: 150, opacity: 0.15 },
+    { id: 6, size: 70, opacity: 0.2 },
   ]);
 
   useEffect(() => {
@@ -21,23 +23,25 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative min-h-[600px] w-full bg-[#293a4c] py-28 px-4 overflow-hidden">
-      {/* Bubble Navigation */}
+    <div className="relative min-h-[600px] w-full bg-gradient-to-br from-primary via-primary/90 to-primary-dark py-28 px-4 overflow-hidden animate-gradient">
+      {/* Animated Bubbles */}
       {bubbles.map((bubble) => (
         <div
           key={bubble.id}
-          className="absolute rounded-full bg-primary/20 backdrop-blur-sm transition-all duration-700 ease-out hover:bg-primary/30 animate-float pointer-events-none"
+          className="absolute rounded-full bg-white/10 backdrop-blur-sm transition-all duration-700 ease-out animate-float"
           style={{
             width: `${bubble.size}px`,
             height: `${bubble.size}px`,
+            opacity: bubble.opacity,
             transform: `translate(${
-              (mousePosition.x / window.innerWidth) * 50 - 25
+              (mousePosition.x / window.innerWidth) * 30 - 15
             }px, ${
-              (mousePosition.y / window.innerHeight) * 50 - 25
-            }px) scale(${1 + Math.sin(Date.now() / 1000) * 0.1})`,
-            left: `${(bubble.id * 25) - 10}%`,
-            top: `${((bubble.id % 2) * 40) + 20}%`,
-            animation: `float-${bubble.id} ${3 + bubble.id}s ease-in-out infinite`,
+              (mousePosition.y / window.innerHeight) * 30 - 15
+            }px) scale(${1 + Math.sin(Date.now() / 1000 + bubble.id) * 0.1})`,
+            left: `${(bubble.id * 15) % 85}%`,
+            top: `${((bubble.id * 23) % 70) + 15}%`,
+            animation: `float ${3 + bubble.id % 3}s ease-in-out infinite`,
+            animationDelay: `${bubble.id * 0.5}s`,
           }}
         />
       ))}
