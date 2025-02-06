@@ -118,6 +118,27 @@ const StaffingServices = () => {
           </div>
         </div>
 
+        {/* Job Seeker Section */}
+        <div className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-primary text-center mb-6">
+              Job seeker?
+            </h2>
+            <p className="text-center text-lg mb-8">
+              We have resources, opportunities, and the expertise to get you started.
+            </p>
+            <div className="flex justify-center">
+              <Button 
+                onClick={() => navigate("/find-a-job")}
+                className="bg-primary hover:bg-primary/90"
+              >
+                Get Started
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Our Staffing Solutions Section */}
         <div className="py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
