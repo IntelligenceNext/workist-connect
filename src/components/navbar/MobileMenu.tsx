@@ -10,7 +10,7 @@ interface MobileMenuProps {
   isOpen: boolean;
   navItems: NavItem[];
   activeSubmenu: string | null;
-  toggleSubmenu: (name: string) => void;
+  toggleSubmenu: (name: string, e: React.MouseEvent) => void;
   resourceLinks: Array<{
     name: string;
     href: string;
@@ -28,7 +28,7 @@ const MobileMenu = ({ isOpen, navItems, activeSubmenu, toggleSubmenu, resourceLi
         {navItems.map((item) => (
           <div key={item.name}>
             <button
-              onClick={() => item.hasSubmenu && toggleSubmenu(item.name)}
+              onClick={(e) => item.hasSubmenu && toggleSubmenu(item.name, e)}
               className="text-white hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center"
             >
               {item.name}
