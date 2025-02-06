@@ -107,26 +107,26 @@ const Navbar = () => {
                 </button>
 
                 {item.hasSubmenu && activeSubmenu === item.name && (
-                  <div className="absolute left-0 mt-2 w-screen -ml-[50vw] left-1/2 bg-white shadow-lg">
+                  <div className="absolute left-0 mt-2 w-screen -ml-[50vw] left-1/2 bg-[#040842] shadow-lg">
                     <div className="max-w-7xl mx-auto">
                       <div className="flex">
                         {/* Tab buttons */}
-                        <div className="w-48 bg-gray-50 py-6">
+                        <div className="w-48 bg-[#030631] py-6">
                           <button
                             onClick={() => setActiveTab("services")}
-                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "services" ? "text-pink-600 bg-white" : "text-gray-600"}`}
+                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "services" ? "text-white bg-[#040842]" : "text-gray-300"}`}
                           >
                             Services
                           </button>
                           <button
                             onClick={() => setActiveTab("industries")}
-                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "industries" ? "text-pink-600 bg-white" : "text-gray-600"}`}
+                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "industries" ? "text-white bg-[#040842]" : "text-gray-300"}`}
                           >
                             Industries
                           </button>
                           <button
                             onClick={() => setActiveTab("locations")}
-                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "locations" ? "text-pink-600 bg-white" : "text-gray-600"}`}
+                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "locations" ? "text-white bg-[#040842]" : "text-gray-300"}`}
                           >
                             Locations
                           </button>
@@ -140,12 +140,12 @@ const Navbar = () => {
                                 <a
                                   key={service.name}
                                   href={service.href}
-                                  className="flex items-start p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                                  className="flex items-start p-4 rounded-lg hover:bg-[#030631] transition-colors group"
                                 >
                                   <span className="text-2xl mr-4">{service.icon}</span>
                                   <div>
-                                    <h3 className="text-gray-900 font-medium">{service.name}</h3>
-                                    <p className="text-gray-500 text-sm mt-1">{service.description}</p>
+                                    <h3 className="text-white font-medium">{service.name}</h3>
+                                    <p className="text-gray-300 text-sm mt-1">{service.description}</p>
                                   </div>
                                 </a>
                               ))}
@@ -158,7 +158,7 @@ const Navbar = () => {
                                 <a
                                   key={industry.name}
                                   href={industry.href}
-                                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                                  className="text-gray-300 hover:text-white transition-colors"
                                 >
                                   {industry.name}
                                 </a>
@@ -172,17 +172,17 @@ const Navbar = () => {
                                 <a
                                   key={location.name}
                                   href={location.href}
-                                  className="flex items-center p-4 rounded-lg hover:bg-gray-50"
+                                  className="flex items-center p-4 rounded-lg hover:bg-[#030631] group"
                                 >
                                   <span className="text-2xl mr-3">{location.flag}</span>
-                                  <span className="text-gray-900">{location.name}</span>
+                                  <span className="text-white">{location.name}</span>
                                 </a>
                               ))}
                             </div>
                           )}
 
-                          <div className="mt-6 pt-6 border-t">
-                            <a href={`/${activeTab}`} className="text-pink-600 hover:text-pink-700 font-medium flex items-center">
+                          <div className="mt-6 pt-6 border-t border-[#030631]">
+                            <a href={`/${activeTab}`} className="text-white hover:text-gray-300 font-medium flex items-center">
                               View all {activeTab}
                               <ChevronDown className="ml-1 h-4 w-4 rotate-[-90deg]" />
                             </a>
@@ -216,7 +216,7 @@ const Navbar = () => {
               <div key={item.name}>
                 <button
                   onClick={() => item.hasSubmenu && toggleSubmenu(item.name)}
-                  className="text-white hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
+                  className="text-white hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center"
                 >
                   {item.name}
                   {item.hasSubmenu && (
