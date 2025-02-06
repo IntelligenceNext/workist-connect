@@ -150,7 +150,6 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-4">
             {navItems.map((item) => (
               <div key={item.name} className="relative group">
@@ -162,8 +161,8 @@ const Navbar = () => {
                 </button>
 
                 {item.hasSubmenu && activeSubmenu === item.name && (
-                  <div className="absolute left-0 mt-2 w-screen max-w-none transform -translate-x-1/2 left-1/2 bg-[#040842] shadow-lg">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div className="absolute left-0 mt-2 w-screen max-w-none transform -translate-x-1/2 left-1/2 bg-[#040842]">
+                    <div className="max-w-7xl mx-auto">
                       {item.name === "For Business" && (
                         <BusinessSubmenu 
                           services={services}
@@ -184,7 +183,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -196,7 +194,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <MobileMenu 
         isOpen={isOpen}
         navItems={navItems}
