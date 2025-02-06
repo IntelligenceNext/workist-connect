@@ -36,7 +36,7 @@ const StaffingServices = () => {
       <div className="min-h-screen bg-white">
         {/* Hero Section with Gradient Background */}
         <div className="relative py-20 bg-cover bg-center" style={{
-          backgroundImage: 'url("https://insightglobal.com/wp-content/uploads/2024/11/SemicircleGradient.png")',
+          backgroundImage: 'url("https://workistforit.in/images/SemicircleGradient.png")',
         }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-3 gap-8">
