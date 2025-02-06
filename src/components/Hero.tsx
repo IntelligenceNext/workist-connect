@@ -92,15 +92,10 @@ const Hero = () => {
           {/* Trusted By Section */}
           <div className="mt-24 text-center">
             <p className="text-white/80 mb-8 text-sm uppercase tracking-wider">Trusted By</p>
-            <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"
                 alt="IBM"
-                className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://1000logos.net/wp-content/uploads/2023/04/Infosys-logo.png"
-                alt="Infosys"
                 className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
               <img
@@ -116,11 +111,6 @@ const Hero = () => {
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg"
                 alt="Wipro"
-                className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://www.sonata-software.com/sites/all/themes/sonata_cms/images/sonata-logo.svg"
-                alt="Sonata Software"
                 className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
             </div>
