@@ -173,8 +173,8 @@ const StaffingServices = () => {
 
               <div>
                 <img
-                  src="/placeholder.svg"
-                  alt="Desktop interface showing candidate management"
+                  src="/lovable-uploads/a873c66a-932f-4901-811b-8a9a4d734fcf.png"
+                  alt="Advanced candidate selection interface showing multiple profiles"
                   className="w-full h-auto rounded-lg shadow-xl"
                   loading="lazy"
                 />
