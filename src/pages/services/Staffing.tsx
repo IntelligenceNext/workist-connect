@@ -35,7 +35,7 @@ const StaffingServices = () => {
       <Navbar />
       <div className="min-h-screen bg-white">
         {/* Hero Section with Gradient Background */}
-        <div className="relative pt-[20%] bg-cover bg-center" style={{
+        <div className="relative pt-[10%] bg-cover bg-center" style={{
           backgroundImage: 'url("https://workistforit.in/images/SemicircleGradient.png")',
         }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
