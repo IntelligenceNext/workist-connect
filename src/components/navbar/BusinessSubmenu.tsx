@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { useState } from "react";
 
 interface Service {
   name: string;
@@ -24,78 +25,134 @@ interface BusinessSubmenuProps {
   locations: Location[];
 }
 
-const BusinessSubmenu = ({ services }: BusinessSubmenuProps) => {
+const BusinessSubmenu = ({ services, industries, locations }: BusinessSubmenuProps) => {
+  const [activeTab, setActiveTab] = useState('services');
+
   return (
-    <div className="py-8 px-4">
-      <div className="flex space-x-4">
-        <div className="flex flex-col space-y-4 w-48">
-          <button className="px-6 py-2 bg-white text-primary rounded-full font-medium">
+    <div className="py-8 px-4 bg-[#001B3D]">
+      <div className="max-w-7xl mx-auto flex space-x-8">
+        <div className="flex flex-col space-y-2 min-w-[200px]">
+          <button
+            onClick={() => setActiveTab('services')}
+            className={`px-6 py-3 text-left rounded-lg font-medium transition-colors ${
+              activeTab === 'services' 
+                ? 'bg-white text-[#001B3D]' 
+                : 'text-white hover:bg-white/10'
+            }`}
+          >
             Services
           </button>
-          <button className="px-6 py-2 text-white hover:bg-white/10 rounded-full font-medium">
+          <button
+            onClick={() => setActiveTab('industries')}
+            className={`px-6 py-3 text-left rounded-lg font-medium transition-colors ${
+              activeTab === 'industries' 
+                ? 'bg-white text-[#001B3D]' 
+                : 'text-white hover:bg-white/10'
+            }`}
+          >
             Industries
           </button>
-          <button className="px-6 py-2 text-white hover:bg-white/10 rounded-full font-medium">
+          <button
+            onClick={() => setActiveTab('locations')}
+            className={`px-6 py-3 text-left rounded-lg font-medium transition-colors ${
+              activeTab === 'locations' 
+                ? 'bg-white text-[#001B3D]' 
+                : 'text-white hover:bg-white/10'
+            }`}
+          >
             Locations
           </button>
         </div>
 
-        <div className="flex-1 grid grid-cols-3 gap-4">
-          <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
-            <div className="text-accent text-2xl">👥</div>
-            <div>
-              <h3 className="font-semibold text-primary">Staffing Services</h3>
-            </div>
-          </div>
+        <div className="flex-1">
+          {activeTab === 'services' && (
+            <div className="grid grid-cols-3 gap-4">
+              <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
+                <div className="text-[#FF1493] text-2xl">👥</div>
+                <div>
+                  <h3 className="font-semibold text-[#001B3D]">Staffing Services</h3>
+                </div>
+              </div>
 
-          <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
-            <div className="text-accent text-2xl">🌲</div>
-            <div>
-              <h3 className="font-semibold text-primary">
-                Evergreen Professional Services
-              </h3>
-            </div>
-          </div>
+              <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
+                <div className="text-[#FF1493] text-2xl">🌲</div>
+                <div>
+                  <h3 className="font-semibold text-[#001B3D]">
+                    Evergreen Professional Services
+                  </h3>
+                </div>
+              </div>
 
-          <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
-            <div className="text-accent text-2xl">🧭</div>
-            <div>
-              <h3 className="font-semibold text-primary">
-                Compass Culture Consulting
-              </h3>
-            </div>
-          </div>
+              <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
+                <div className="text-[#FF1493] text-2xl">🧭</div>
+                <div>
+                  <h3 className="font-semibold text-[#001B3D]">
+                    Compass Culture Consulting
+                  </h3>
+                </div>
+              </div>
 
-          <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
-            <div className="text-accent text-2xl">👥</div>
-            <div>
-              <h3 className="font-semibold text-primary">
-                Recruitment Process Outsourcing (RPO)
-              </h3>
-            </div>
-          </div>
+              <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
+                <div className="text-[#FF1493] text-2xl">👥</div>
+                <div>
+                  <h3 className="font-semibold text-[#001B3D]">
+                    Recruitment Process Outsourcing (RPO)
+                  </h3>
+                </div>
+              </div>
 
-          <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
-            <div className="text-accent text-2xl">❤️</div>
-            <div>
-              <h3 className="font-semibold text-primary">
-                Diversity, Equity, Inclusion, & Belonging
-              </h3>
-            </div>
-          </div>
+              <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
+                <div className="text-[#FF1493] text-2xl">❤️</div>
+                <div>
+                  <h3 className="font-semibold text-[#001B3D]">
+                    Diversity, Equity, Inclusion, & Belonging
+                  </h3>
+                </div>
+              </div>
 
-          <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
-            <div className="text-accent text-2xl">🏆</div>
-            <div>
-              <h3 className="font-semibold text-primary">
-                Executive Recruiting
-              </h3>
+              <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
+                <div className="text-[#FF1493] text-2xl">🏆</div>
+                <div>
+                  <h3 className="font-semibold text-[#001B3D]">
+                    Executive Recruiting
+                  </h3>
+                </div>
+              </div>
             </div>
-          </div>
+          )}
+
+          {activeTab === 'industries' && (
+            <div className="grid grid-cols-2 gap-4">
+              {industries.map((industry) => (
+                <a
+                  key={industry.name}
+                  href={industry.href}
+                  className="bg-white rounded-lg p-6 hover:bg-gray-50 transition-colors"
+                >
+                  <h3 className="font-semibold text-[#001B3D]">{industry.name}</h3>
+                </a>
+              ))}
+            </div>
+          )}
+
+          {activeTab === 'locations' && (
+            <div className="grid grid-cols-2 gap-4">
+              {locations.map((location) => (
+                <a
+                  key={location.name}
+                  href={location.href}
+                  className="bg-white rounded-lg p-6 hover:bg-gray-50 transition-colors flex items-center space-x-2"
+                >
+                  <span className="text-2xl">{location.flag}</span>
+                  <h3 className="font-semibold text-[#001B3D]">{location.name}</h3>
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
-      <div className="mt-6">
+      <div className="max-w-7xl mx-auto mt-6">
         <a
           href="/services"
           className="inline-flex items-center text-[#00E6CA] hover:text-[#00E6CA]/90 font-medium"

@@ -19,20 +19,32 @@ const Navbar = () => {
     { 
       name: "Professional Services", 
       href: "/services/professional", 
-      icon: "💼",
+      icon: "🌲",
       description: "Comprehensive professional solutions"
     },
     { 
       name: "Culture Consulting", 
       href: "/services/culture-consulting", 
-      icon: "🎯",
+      icon: "🧭",
       description: "Transform your organizational culture"
     },
     { 
       name: "Recruitment Process Outsourcing", 
       href: "/services/rpo", 
-      icon: "🔄",
+      icon: "👥",
       description: "Streamline your hiring process"
+    },
+    { 
+      name: "Diversity, Equity, Inclusion, & Belonging", 
+      href: "/services/deib", 
+      icon: "❤️",
+      description: "Build an inclusive workplace"
+    },
+    { 
+      name: "Executive Recruiting", 
+      href: "/services/executive", 
+      icon: "🏆",
+      description: "Find top-level talent"
     }
   ];
 
