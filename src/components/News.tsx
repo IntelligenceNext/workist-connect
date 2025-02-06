@@ -80,8 +80,8 @@ const News = () => {
                 </div>
               </CardHeader>
               
-              <CardContent>
-                <CardDescription>{item.excerpt}</CardDescription>
+              <CardContent className="bg-[#040842] text-white">
+                <CardDescription className="text-white">{item.excerpt}</CardDescription>
               </CardContent>
               
               <CardFooter className="mt-auto">
