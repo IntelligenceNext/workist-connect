@@ -24,13 +24,11 @@ const Family = () => {
             </Button>
           </div>
           
-          <div className="relative w-full pt-[41.67%]">
-            <iframe
-              src="https://player.vimeo.com/video/505519111?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0"
-              className="absolute top-0 left-0 w-full h-full"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              title="The Call"
+          <div className="relative w-full h-[400px] overflow-hidden rounded-lg">
+            <img
+              src="/photo-1519389950473-47ba0277781c"
+              alt="Team collaborating at work"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
