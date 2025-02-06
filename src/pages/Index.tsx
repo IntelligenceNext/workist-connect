@@ -4,6 +4,7 @@ import Services from "@/components/Services";
 import Stats from "@/components/Stats";
 import Industries from "@/components/Industries";
 import Family from "@/components/Family";
+import News from "@/components/News";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <Stats />
       <Industries />
       <Family />
+      <News />
     </div>
   );
 };
