@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, BookOpen, FileText, TrendingUp, FileCheck, BookText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
@@ -78,6 +78,39 @@ const Navbar = () => {
     }
   ];
 
+  const resourceLinks = [
+    {
+      name: "Workplace Management",
+      href: "/resources/workplace-management",
+      icon: "📊",
+      description: "Best practices for managing modern workplaces effectively"
+    },
+    {
+      name: "How to Hire",
+      href: "/resources/how-to-hire",
+      icon: "🎯",
+      description: "Comprehensive guides on recruitment and hiring processes"
+    },
+    {
+      name: "Market Trends",
+      href: "/resources/market-trends",
+      icon: "📈",
+      description: "Latest insights and analysis of industry trends"
+    },
+    {
+      name: "White Papers",
+      href: "/resources/white-papers",
+      icon: "📄",
+      description: "In-depth research and industry insights"
+    },
+    {
+      name: "Case Studies",
+      href: "/resources/case-studies",
+      icon: "📚",
+      description: "Real success stories and implementation examples"
+    }
+  ];
+
   const navItems = [
     {
       name: "For Business",
@@ -89,7 +122,11 @@ const Navbar = () => {
       href: "/jobs",
       hasSubmenu: true 
     },
-    { name: "Resources", href: "/resources" },
+    { 
+      name: "Resources", 
+      href: "/resources",
+      hasSubmenu: true 
+    },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -229,6 +266,26 @@ const Navbar = () => {
                             </a>
                           ))}
                         </div>
+                      ) : item.name === "Resources" ? (
+                        <div className="grid grid-cols-2 gap-4 p-6">
+                          {resourceLinks.map((link) => (
+                            <a
+                              key={link.name}
+                              href={link.href}
+                              className="flex items-start p-4 rounded-lg hover:bg-[#030631] transition-colors group"
+                            >
+                              <span className="text-2xl mr-4">{link.icon}</span>
+                              <div>
+                                <h3 className="text-white font-medium group-hover:text-accent transition-colors">
+                                  {link.name}
+                                </h3>
+                                <p className="text-gray-300 text-sm mt-1 group-hover:text-white transition-colors">
+                                  {link.description}
+                                </p>
+                              </div>
+                            </a>
+                          ))}
+                        </div>
                       ) : null}
                     </div>
                   </div>
@@ -268,10 +325,10 @@ const Navbar = () => {
                 {item.hasSubmenu && activeSubmenu === item.name && (
                   <div className="pl-4 py-2">
                     <div className="space-y-2">
-                      {item.name === "For Job Seekers" && (
+                      {item.name === "Resources" && (
                         <div>
-                          <h3 className="text-sm font-semibold text-white mb-2">Job Seeker Links</h3>
-                          {jobSeekerLinks.map((link) => (
+                          <h3 className="text-sm font-semibold text-white mb-2">Resource Links</h3>
+                          {resourceLinks.map((link) => (
                             <a
                               key={link.name}
                               href={link.href}
