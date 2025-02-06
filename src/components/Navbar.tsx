@@ -62,13 +62,44 @@ const Navbar = () => {
     { name: "India", flag: "🇮🇳", href: "/locations/india" }
   ];
 
+  const jobSeekerLinks = [
+    {
+      name: "Search Jobs",
+      href: "/jobs/search",
+      icon: "🔍",
+      description: "Browse through thousands of job opportunities across various industries"
+    },
+    {
+      name: "In-House Team",
+      href: "/jobs/in-house",
+      icon: "🏢",
+      description: "Join our internal team and help shape the future of recruitment"
+    },
+    {
+      name: "Consultants",
+      href: "/jobs/consultants",
+      icon: "💼",
+      description: "Explore consulting opportunities with leading organizations"
+    },
+    {
+      name: "Be The Light Tour",
+      href: "/jobs/be-the-light",
+      icon: "✨",
+      description: "Join our mission to illuminate career paths and inspire change"
+    }
+  ];
+
   const navItems = [
     {
       name: "For Business",
       href: "/business",
       hasSubmenu: true,
     },
-    { name: "For Job Seekers", href: "/jobs" },
+    { 
+      name: "For Job Seekers", 
+      href: "/jobs",
+      hasSubmenu: true 
+    },
     { name: "Resources", href: "/resources" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
@@ -109,86 +140,56 @@ const Navbar = () => {
                 {item.hasSubmenu && activeSubmenu === item.name && (
                   <div className="absolute left-0 mt-2 w-screen -ml-[50vw] left-1/2 bg-[#040842] shadow-lg">
                     <div className="max-w-7xl mx-auto">
-                      <div className="flex">
-                        {/* Tab buttons */}
-                        <div className="w-48 bg-[#030631] py-6">
-                          <button
-                            onClick={() => setActiveTab("services")}
-                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "services" ? "text-white bg-[#040842]" : "text-gray-300 hover:text-white hover:bg-[#040842] transition-colors"}`}
-                          >
-                            Services
-                          </button>
-                          <button
-                            onClick={() => setActiveTab("industries")}
-                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "industries" ? "text-white bg-[#040842]" : "text-gray-300 hover:text-white hover:bg-[#040842] transition-colors"}`}
-                          >
-                            Industries
-                          </button>
-                          <button
-                            onClick={() => setActiveTab("locations")}
-                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "locations" ? "text-white bg-[#040842]" : "text-gray-300 hover:text-white hover:bg-[#040842] transition-colors"}`}
-                          >
-                            Locations
-                          </button>
+                      {item.name === "For Business" ? (
+                        <div className="grid grid-cols-2 gap-4 p-6">
+                          {services.map((service) => (
+                            <a
+                              key={service.name}
+                              href={service.href}
+                              className="flex items-start p-4 rounded-lg hover:bg-[#030631] transition-colors group"
+                            >
+                              <span className="text-2xl mr-4">{service.icon}</span>
+                              <div>
+                                <h3 className="text-white font-medium group-hover:text-accent transition-colors">
+                                  {service.name}
+                                </h3>
+                                <p className="text-gray-300 text-sm mt-1 group-hover:text-white transition-colors">
+                                  {service.description}
+                                </p>
+                              </div>
+                            </a>
+                          ))}
                         </div>
-
-                        {/* Tab content */}
-                        <div className="flex-1 p-6">
-                          {activeTab === "services" && (
-                            <div className="grid grid-cols-2 gap-4">
-                              {services.map((service) => (
-                                <a
-                                  key={service.name}
-                                  href={service.href}
-                                  className="flex items-start p-4 rounded-lg hover:bg-[#030631] transition-colors group"
-                                >
-                                  <span className="text-2xl mr-4">{service.icon}</span>
-                                  <div>
-                                    <h3 className="text-white font-medium group-hover:text-accent transition-colors">{service.name}</h3>
-                                    <p className="text-gray-300 text-sm mt-1 group-hover:text-white transition-colors">{service.description}</p>
-                                  </div>
-                                </a>
-                              ))}
-                            </div>
-                          )}
-
-                          {activeTab === "industries" && (
-                            <div className="grid grid-cols-2 gap-x-8 gap-y-4">
-                              {industries.map((industry) => (
-                                <a
-                                  key={industry.name}
-                                  href={industry.href}
-                                  className="text-gray-300 hover:text-white hover:bg-[#030631] p-2 rounded transition-colors"
-                                >
-                                  {industry.name}
-                                </a>
-                              ))}
-                            </div>
-                          )}
-
-                          {activeTab === "locations" && (
-                            <div className="grid grid-cols-2 gap-4">
-                              {locations.map((location) => (
-                                <a
-                                  key={location.name}
-                                  href={location.href}
-                                  className="flex items-center p-4 rounded-lg hover:bg-[#030631] group transition-colors"
-                                >
-                                  <span className="text-2xl mr-3">{location.flag}</span>
-                                  <span className="text-white group-hover:text-accent transition-colors">{location.name}</span>
-                                </a>
-                              ))}
-                            </div>
-                          )}
-
-                          <div className="mt-6 pt-6 border-t border-[#030631]">
-                            <a href={`/${activeTab}`} className="text-white hover:text-accent transition-colors font-medium flex items-center">
-                              View all {activeTab}
+                      ) : item.name === "For Job Seekers" ? (
+                        <div className="grid grid-cols-2 gap-4 p-6">
+                          {jobSeekerLinks.map((link) => (
+                            <a
+                              key={link.name}
+                              href={link.href}
+                              className="flex items-start p-4 rounded-lg hover:bg-[#030631] transition-colors group"
+                            >
+                              <span className="text-2xl mr-4">{link.icon}</span>
+                              <div>
+                                <h3 className="text-white font-medium group-hover:text-accent transition-colors">
+                                  {link.name}
+                                </h3>
+                                <p className="text-gray-300 text-sm mt-1 group-hover:text-white transition-colors">
+                                  {link.description}
+                                </p>
+                              </div>
+                            </a>
+                          ))}
+                          <div className="col-span-2 mt-6 pt-6 border-t border-[#030631]">
+                            <a 
+                              href="/jobs" 
+                              className="text-white hover:text-accent transition-colors font-medium flex items-center"
+                            >
+                              View all opportunities
                               <ChevronDown className="ml-1 h-4 w-4 rotate-[-90deg]" />
                             </a>
                           </div>
                         </div>
-                      </div>
+                      ) : null}
                     </div>
                   </div>
                 )}
@@ -227,42 +228,20 @@ const Navbar = () => {
                 {item.hasSubmenu && activeSubmenu === item.name && (
                   <div className="pl-4 py-2">
                     <div className="space-y-2">
-                      <div>
-                        <h3 className="text-sm font-semibold text-white mb-2">Services</h3>
-                        {services.map((service) => (
-                          <a
-                            key={service.name}
-                            href={service.href}
-                            className="block px-3 py-2 text-gray-300 hover:text-white text-sm"
-                          >
-                            {service.name}
-                          </a>
-                        ))}
-                      </div>
-                      <div>
-                        <h3 className="text-sm font-semibold text-white mb-2">Industries</h3>
-                        {industries.map((industry) => (
-                          <a
-                            key={industry.name}
-                            href={industry.href}
-                            className="block px-3 py-2 text-gray-300 hover:text-white text-sm"
-                          >
-                            {industry.name}
-                          </a>
-                        ))}
-                      </div>
-                      <div>
-                        <h3 className="text-sm font-semibold text-white mb-2">Locations</h3>
-                        {locations.map((location) => (
-                          <a
-                            key={location.name}
-                            href={location.href}
-                            className="block px-3 py-2 text-gray-300 hover:text-white text-sm"
-                          >
-                            {location.flag} {location.name}
-                          </a>
-                        ))}
-                      </div>
+                      {item.name === "For Job Seekers" && (
+                        <div>
+                          <h3 className="text-sm font-semibold text-white mb-2">Job Seeker Links</h3>
+                          {jobSeekerLinks.map((link) => (
+                            <a
+                              key={link.name}
+                              href={link.href}
+                              className="block px-3 py-2 text-gray-300 hover:text-white text-sm"
+                            >
+                              {link.icon} {link.name}
+                            </a>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}
