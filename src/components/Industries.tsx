@@ -43,7 +43,7 @@ const Industries = () => {
             <span key={industry.name}>
               <a
                 href={industry.href}
-                className="text-primary hover:text-primary-dark transition-colors"
+                className="text-[#040842] hover:text-opacity-80 transition-colors"
               >
                 {industry.name}
               </a>
