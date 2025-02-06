@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Menu, X } from "lucide-react";
+import BusinessSubmenu from "./navbar/BusinessSubmenu";
+import JobSeekersSubmenu from "./navbar/JobSeekersSubmenu";
+import ResourcesSubmenu from "./navbar/ResourcesSubmenu";
+import MobileMenu from "./navbar/MobileMenu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState("services");
 
   const services = [
     { 
@@ -158,135 +159,24 @@ const Navbar = () => {
                   className="text-white hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
                 >
                   {item.name}
-                  {item.hasSubmenu && (
-                    <ChevronDown className="ml-1 h-4 w-4" />
-                  )}
                 </button>
 
                 {item.hasSubmenu && activeSubmenu === item.name && (
                   <div className="absolute left-0 mt-2 w-screen max-w-none transform -translate-x-1/2 left-1/2 bg-[#040842] shadow-lg">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                      {item.name === "For Business" ? (
-                        <div className="p-6">
-                          <Tabs defaultValue="services" className="w-full">
-                            <TabsList className="bg-[#030631] text-white mb-6">
-                              <TabsTrigger 
-                                value="services"
-                                className="text-white data-[state=active]:bg-[#040842] data-[state=active]:text-white"
-                              >
-                                Services
-                              </TabsTrigger>
-                              <TabsTrigger 
-                                value="industries"
-                                className="text-white data-[state=active]:bg-[#040842] data-[state=active]:text-white"
-                              >
-                                Industries
-                              </TabsTrigger>
-                              <TabsTrigger 
-                                value="locations"
-                                className="text-white data-[state=active]:bg-[#040842] data-[state=active]:text-white"
-                              >
-                                Locations
-                              </TabsTrigger>
-                            </TabsList>
-                            
-                            <TabsContent value="services" className="mt-0">
-                              <div className="grid grid-cols-2 gap-4">
-                                {services.map((service) => (
-                                  <a
-                                    key={service.name}
-                                    href={service.href}
-                                    className="flex items-start p-4 rounded-lg hover:bg-[#030631] transition-colors group"
-                                  >
-                                    <span className="text-2xl mr-4">{service.icon}</span>
-                                    <div>
-                                      <h3 className="text-white font-medium group-hover:text-accent transition-colors">
-                                        {service.name}
-                                      </h3>
-                                      <p className="text-gray-300 text-sm mt-1 group-hover:text-white transition-colors">
-                                        {service.description}
-                                      </p>
-                                    </div>
-                                  </a>
-                                ))}
-                              </div>
-                            </TabsContent>
-
-                            <TabsContent value="industries" className="mt-0">
-                              <div className="grid grid-cols-2 gap-4">
-                                {industries.map((industry) => (
-                                  <a
-                                    key={industry.name}
-                                    href={industry.href}
-                                    className="p-4 rounded-lg hover:bg-[#030631] transition-colors group"
-                                  >
-                                    <h3 className="text-white font-medium group-hover:text-accent transition-colors">
-                                      {industry.name}
-                                    </h3>
-                                  </a>
-                                ))}
-                              </div>
-                            </TabsContent>
-
-                            <TabsContent value="locations" className="mt-0">
-                              <div className="grid grid-cols-2 gap-4">
-                                {locations.map((location) => (
-                                  <a
-                                    key={location.name}
-                                    href={location.href}
-                                    className="p-4 rounded-lg hover:bg-[#030631] transition-colors group"
-                                  >
-                                    <h3 className="text-white font-medium group-hover:text-accent transition-colors">
-                                      <span className="mr-2">{location.flag}</span>
-                                      {location.name}
-                                    </h3>
-                                  </a>
-                                ))}
-                              </div>
-                            </TabsContent>
-                          </Tabs>
-                        </div>
-                      ) : item.name === "For Job Seekers" ? (
-                        <div className="grid grid-cols-2 gap-4 p-6">
-                          {jobSeekerLinks.map((link) => (
-                            <a
-                              key={link.name}
-                              href={link.href}
-                              className="flex items-start p-4 rounded-lg hover:bg-[#030631] transition-colors group"
-                            >
-                              <span className="text-2xl mr-4">{link.icon}</span>
-                              <div>
-                                <h3 className="text-white font-medium group-hover:text-accent transition-colors">
-                                  {link.name}
-                                </h3>
-                                <p className="text-gray-300 text-sm mt-1 group-hover:text-white transition-colors">
-                                  {link.description}
-                                </p>
-                              </div>
-                            </a>
-                          ))}
-                        </div>
-                      ) : item.name === "Resources" ? (
-                        <div className="grid grid-cols-2 gap-4 p-6">
-                          {resourceLinks.map((link) => (
-                            <a
-                              key={link.name}
-                              href={link.href}
-                              className="flex items-start p-4 rounded-lg hover:bg-[#030631] transition-colors group"
-                            >
-                              <span className="text-2xl mr-4">{link.icon}</span>
-                              <div>
-                                <h3 className="text-white font-medium group-hover:text-accent transition-colors">
-                                  {link.name}
-                                </h3>
-                                <p className="text-gray-300 text-sm mt-1 group-hover:text-white transition-colors">
-                                  {link.description}
-                                </p>
-                              </div>
-                            </a>
-                          ))}
-                        </div>
-                      ) : null}
+                      {item.name === "For Business" && (
+                        <BusinessSubmenu 
+                          services={services}
+                          industries={industries}
+                          locations={locations}
+                        />
+                      )}
+                      {item.name === "For Job Seekers" && (
+                        <JobSeekersSubmenu jobSeekerLinks={jobSeekerLinks} />
+                      )}
+                      {item.name === "Resources" && (
+                        <ResourcesSubmenu resourceLinks={resourceLinks} />
+                      )}
                     </div>
                   </div>
                 )}
@@ -307,46 +197,13 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      {isOpen && (
-        <div className="md:hidden animate-fadeIn">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navItems.map((item) => (
-              <div key={item.name}>
-                <button
-                  onClick={() => item.hasSubmenu && toggleSubmenu(item.name)}
-                  className="text-white hover:text-primary block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center"
-                >
-                  {item.name}
-                  {item.hasSubmenu && (
-                    <ChevronDown className="ml-1 h-4 w-4" />
-                  )}
-                </button>
-
-                {item.hasSubmenu && activeSubmenu === item.name && (
-                  <div className="pl-4 py-2">
-                    <div className="space-y-2">
-                      {item.name === "Resources" && (
-                        <div>
-                          <h3 className="text-sm font-semibold text-white mb-2">Resource Links</h3>
-                          {resourceLinks.map((link) => (
-                            <a
-                              key={link.name}
-                              href={link.href}
-                              className="block px-3 py-2 text-gray-300 hover:text-white text-sm"
-                            >
-                              {link.icon} {link.name}
-                            </a>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+      <MobileMenu 
+        isOpen={isOpen}
+        navItems={navItems}
+        activeSubmenu={activeSubmenu}
+        toggleSubmenu={toggleSubmenu}
+        resourceLinks={resourceLinks}
+      />
     </nav>
   );
 };
