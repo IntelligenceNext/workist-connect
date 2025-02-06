@@ -173,7 +173,7 @@ const StaffingServices = () => {
 
               <div>
                 <img
-                  src="https://insightglobal.com/wp-content/uploads/2024/12/DesktopCandidates.png"
+                  src="https://workistforit.in/images/desktop-candidates.png"
                   alt="Desktop with candidates interface"
                   className="w-full h-auto rounded-lg shadow-xl"
                   loading="lazy"
