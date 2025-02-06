@@ -38,7 +38,6 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <Button className="bg-accent hover:bg-accent/90">Post a Job</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -66,9 +65,6 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <Button className="w-full bg-accent hover:bg-accent/90 mt-4">
-              Post a Job
-            </Button>
           </div>
         </div>
       )}
