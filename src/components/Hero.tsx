@@ -99,7 +99,7 @@ const Hero = () => {
                 className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
               <img
-                src="https://upload.wikimedia.org/wikipedia/en/c/c9/Infosys_logo.svg"
+                src="https://1000logos.net/wp-content/uploads/2023/04/Infosys-logo.png"
                 alt="Infosys"
                 className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
@@ -119,7 +119,7 @@ const Hero = () => {
                 className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
               <img
-                src="https://www.sonata-software.com/sites/default/files/2019-12/sonata-software-logo.png"
+                src="https://www.sonata-software.com/sites/all/themes/sonata_cms/images/sonata-logo.svg"
                 alt="Sonata Software"
                 className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
