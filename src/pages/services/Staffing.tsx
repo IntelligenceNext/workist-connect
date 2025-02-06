@@ -105,7 +105,7 @@ const StaffingServices = () => {
                 className="h-12 object-contain opacity-70 hover:opacity-100 transition-opacity"
               />
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/9/96/TCS_Logo.svg"
+                src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Tata_Consultancy_Services_Logo.svg"
                 alt="TCS"
                 className="h-12 object-contain opacity-70 hover:opacity-100 transition-opacity"
               />
