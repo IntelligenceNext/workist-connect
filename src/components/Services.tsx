@@ -49,7 +49,7 @@ const Services = () => {
               <div className="flow-root bg-white rounded-lg px-6 pb-8 h-full hover:shadow-lg transition-shadow duration-300">
                 <div className="-mt-6">
                   <div>
-                    <span className="inline-flex items-center justify-center p-3 bg-primary rounded-md shadow-lg">
+                    <span className="inline-flex items-center justify-center p-3 bg-[#040842] rounded-md shadow-lg">
                       <service.icon
                         className="h-6 w-6 text-white"
                         aria-hidden="true"
