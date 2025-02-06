@@ -5,6 +5,7 @@ import Stats from "@/components/Stats";
 import Industries from "@/components/Industries";
 import Family from "@/components/Family";
 import News from "@/components/News";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Industries />
       <Family />
       <News />
+      <Footer />
     </div>
   );
 };
