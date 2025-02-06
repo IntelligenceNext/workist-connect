@@ -8,10 +8,42 @@ const Navbar = () => {
   const [activeTab, setActiveTab] = useState("services");
 
   const services = [
-    { name: "Staffing Services", href: "/services/staffing", icon: "👥" },
-    { name: "Professional Services", href: "/services/professional", icon: "💼" },
-    { name: "Culture Consulting", href: "/services/culture-consulting", icon: "🎯" },
-    { name: "Recruitment Process Outsourcing", href: "/services/rpo", icon: "🔄" },
+    { 
+      name: "Staffing Services", 
+      href: "/services/staffing", 
+      icon: "👥",
+      description: "Connect with top talent for your positions"
+    },
+    { 
+      name: "Evergreen Professional Services", 
+      href: "/services/professional", 
+      icon: "🌲",
+      description: "Comprehensive professional solutions"
+    },
+    { 
+      name: "Compass Culture Consulting", 
+      href: "/services/culture-consulting", 
+      icon: "🧭",
+      description: "Transform your organizational culture"
+    },
+    { 
+      name: "Recruitment Process Outsourcing (RPO)", 
+      href: "/services/rpo", 
+      icon: "👥",
+      description: "Streamline your hiring process"
+    },
+    { 
+      name: "Diversity, Equity, Inclusion, & Belonging", 
+      href: "/services/deib", 
+      icon: "❤️",
+      description: "Build an inclusive workplace"
+    },
+    { 
+      name: "Executive Recruiting", 
+      href: "/services/executive", 
+      icon: "🏆",
+      description: "Find top-tier leadership talent"
+    }
   ];
 
   const industries = [
@@ -22,12 +54,12 @@ const Navbar = () => {
     { name: "Construction & Energy", href: "/industries/construction-energy" },
     { name: "Healthcare", href: "/industries/healthcare" },
     { name: "Automotive", href: "/industries/automotive" },
-    { name: "Aviation & Airport Operations", href: "/industries/aviation" },
+    { name: "Aviation & Airport Operations", href: "/industries/aviation" }
   ];
 
   const locations = [
     { name: "United States", flag: "🇺🇸", href: "/locations/us" },
-    { name: "India", flag: "🇮🇳", href: "/locations/india" },
+    { name: "India", flag: "🇮🇳", href: "/locations/india" }
   ];
 
   const navItems = [
@@ -75,78 +107,87 @@ const Navbar = () => {
                 </button>
 
                 {item.hasSubmenu && activeSubmenu === item.name && (
-                  <div className="absolute left-0 mt-2 w-[800px] bg-white rounded-md shadow-lg py-4 z-50">
-                    <div className="flex">
-                      {/* Tab buttons */}
-                      <div className="w-48 border-r border-gray-200">
-                        <button
-                          onClick={() => setActiveTab("services")}
-                          className={`w-full text-left px-4 py-2 ${activeTab === "services" ? "bg-gray-100" : ""}`}
-                        >
-                          Services
-                        </button>
-                        <button
-                          onClick={() => setActiveTab("industries")}
-                          className={`w-full text-left px-4 py-2 ${activeTab === "industries" ? "bg-gray-100" : ""}`}
-                        >
-                          Industries
-                        </button>
-                        <button
-                          onClick={() => setActiveTab("locations")}
-                          className={`w-full text-left px-4 py-2 ${activeTab === "locations" ? "bg-gray-100" : ""}`}
-                        >
-                          Locations
-                        </button>
-                      </div>
+                  <div className="absolute left-0 mt-2 w-screen -ml-[50vw] left-1/2 bg-white shadow-lg">
+                    <div className="max-w-7xl mx-auto">
+                      <div className="flex">
+                        {/* Tab buttons */}
+                        <div className="w-48 bg-gray-50 py-6">
+                          <button
+                            onClick={() => setActiveTab("services")}
+                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "services" ? "text-pink-600 bg-white" : "text-gray-600"}`}
+                          >
+                            Services
+                          </button>
+                          <button
+                            onClick={() => setActiveTab("industries")}
+                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "industries" ? "text-pink-600 bg-white" : "text-gray-600"}`}
+                          >
+                            Industries
+                          </button>
+                          <button
+                            onClick={() => setActiveTab("locations")}
+                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "locations" ? "text-pink-600 bg-white" : "text-gray-600"}`}
+                          >
+                            Locations
+                          </button>
+                        </div>
 
-                      {/* Tab content */}
-                      <div className="flex-1 p-4">
-                        {activeTab === "services" && (
-                          <div className="grid grid-cols-2 gap-4">
-                            {services.map((service) => (
-                              <a
-                                key={service.name}
-                                href={service.href}
-                                className="flex items-center p-3 rounded-lg hover:bg-gray-50"
-                              >
-                                <span className="text-2xl mr-3">{service.icon}</span>
-                                <span className="text-gray-700">{service.name}</span>
-                              </a>
-                            ))}
-                            <a href="/services" className="col-span-2 text-primary hover:text-primary-dark mt-4">
-                              View all services →
+                        {/* Tab content */}
+                        <div className="flex-1 p-6">
+                          {activeTab === "services" && (
+                            <div className="grid grid-cols-2 gap-4">
+                              {services.map((service) => (
+                                <a
+                                  key={service.name}
+                                  href={service.href}
+                                  className="flex items-start p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                                >
+                                  <span className="text-2xl mr-4">{service.icon}</span>
+                                  <div>
+                                    <h3 className="text-gray-900 font-medium">{service.name}</h3>
+                                    <p className="text-gray-500 text-sm mt-1">{service.description}</p>
+                                  </div>
+                                </a>
+                              ))}
+                            </div>
+                          )}
+
+                          {activeTab === "industries" && (
+                            <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+                              {industries.map((industry) => (
+                                <a
+                                  key={industry.name}
+                                  href={industry.href}
+                                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                                >
+                                  {industry.name}
+                                </a>
+                              ))}
+                            </div>
+                          )}
+
+                          {activeTab === "locations" && (
+                            <div className="grid grid-cols-2 gap-4">
+                              {locations.map((location) => (
+                                <a
+                                  key={location.name}
+                                  href={location.href}
+                                  className="flex items-center p-4 rounded-lg hover:bg-gray-50"
+                                >
+                                  <span className="text-2xl mr-3">{location.flag}</span>
+                                  <span className="text-gray-900">{location.name}</span>
+                                </a>
+                              ))}
+                            </div>
+                          )}
+
+                          <div className="mt-6 pt-6 border-t">
+                            <a href={`/${activeTab}`} className="text-pink-600 hover:text-pink-700 font-medium flex items-center">
+                              View all {activeTab}
+                              <ChevronDown className="ml-1 h-4 w-4 rotate-[-90deg]" />
                             </a>
                           </div>
-                        )}
-
-                        {activeTab === "industries" && (
-                          <div className="grid grid-cols-2 gap-2">
-                            {industries.map((industry) => (
-                              <a
-                                key={industry.name}
-                                href={industry.href}
-                                className="p-2 hover:bg-gray-50 rounded text-gray-700"
-                              >
-                                {industry.name}
-                              </a>
-                            ))}
-                          </div>
-                        )}
-
-                        {activeTab === "locations" && (
-                          <div className="grid grid-cols-2 gap-4">
-                            {locations.map((location) => (
-                              <a
-                                key={location.name}
-                                href={location.href}
-                                className="flex items-center p-3 rounded-lg hover:bg-gray-50"
-                              >
-                                <span className="text-2xl mr-3">{location.flag}</span>
-                                <span className="text-gray-700">{location.name}</span>
-                              </a>
-                            ))}
-                          </div>
-                        )}
+                        </div>
                       </div>
                     </div>
                   </div>
