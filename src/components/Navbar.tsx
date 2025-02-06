@@ -114,19 +114,19 @@ const Navbar = () => {
                         <div className="w-48 bg-[#030631] py-6">
                           <button
                             onClick={() => setActiveTab("services")}
-                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "services" ? "text-white bg-[#040842]" : "text-gray-300"}`}
+                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "services" ? "text-white bg-[#040842]" : "text-gray-300 hover:text-white hover:bg-[#040842] transition-colors"}`}
                           >
                             Services
                           </button>
                           <button
                             onClick={() => setActiveTab("industries")}
-                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "industries" ? "text-white bg-[#040842]" : "text-gray-300"}`}
+                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "industries" ? "text-white bg-[#040842]" : "text-gray-300 hover:text-white hover:bg-[#040842] transition-colors"}`}
                           >
                             Industries
                           </button>
                           <button
                             onClick={() => setActiveTab("locations")}
-                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "locations" ? "text-white bg-[#040842]" : "text-gray-300"}`}
+                            className={`w-full text-left px-6 py-2 font-medium ${activeTab === "locations" ? "text-white bg-[#040842]" : "text-gray-300 hover:text-white hover:bg-[#040842] transition-colors"}`}
                           >
                             Locations
                           </button>
@@ -144,8 +144,8 @@ const Navbar = () => {
                                 >
                                   <span className="text-2xl mr-4">{service.icon}</span>
                                   <div>
-                                    <h3 className="text-white font-medium">{service.name}</h3>
-                                    <p className="text-gray-300 text-sm mt-1">{service.description}</p>
+                                    <h3 className="text-white font-medium group-hover:text-accent transition-colors">{service.name}</h3>
+                                    <p className="text-gray-300 text-sm mt-1 group-hover:text-white transition-colors">{service.description}</p>
                                   </div>
                                 </a>
                               ))}
@@ -158,7 +158,7 @@ const Navbar = () => {
                                 <a
                                   key={industry.name}
                                   href={industry.href}
-                                  className="text-gray-300 hover:text-white transition-colors"
+                                  className="text-gray-300 hover:text-white hover:bg-[#030631] p-2 rounded transition-colors"
                                 >
                                   {industry.name}
                                 </a>
@@ -172,17 +172,17 @@ const Navbar = () => {
                                 <a
                                   key={location.name}
                                   href={location.href}
-                                  className="flex items-center p-4 rounded-lg hover:bg-[#030631] group"
+                                  className="flex items-center p-4 rounded-lg hover:bg-[#030631] group transition-colors"
                                 >
                                   <span className="text-2xl mr-3">{location.flag}</span>
-                                  <span className="text-white">{location.name}</span>
+                                  <span className="text-white group-hover:text-accent transition-colors">{location.name}</span>
                                 </a>
                               ))}
                             </div>
                           )}
 
                           <div className="mt-6 pt-6 border-t border-[#030631]">
-                            <a href={`/${activeTab}`} className="text-white hover:text-gray-300 font-medium flex items-center">
+                            <a href={`/${activeTab}`} className="text-white hover:text-accent transition-colors font-medium flex items-center">
                               View all {activeTab}
                               <ChevronDown className="ml-1 h-4 w-4 rotate-[-90deg]" />
                             </a>
