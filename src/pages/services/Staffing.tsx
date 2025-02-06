@@ -183,6 +183,29 @@ const StaffingServices = () => {
           </div>
         </div>
 
+        {/* Industry Section */}
+        <div className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12" id="h-staffing-all-industries-amp-functions">
+              Staffing All Industries &amp; Functions
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold mb-4">Technology</h3>
+                <p className="text-gray-600">Software development, IT infrastructure, cybersecurity, and more.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold mb-4">Healthcare</h3>
+                <p className="text-gray-600">Medical professionals, administrative staff, and healthcare specialists.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold mb-4">Finance</h3>
+                <p className="text-gray-600">Banking, accounting, financial analysis, and investment roles.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Our Staffing Solutions Section */}
         <div className="py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
