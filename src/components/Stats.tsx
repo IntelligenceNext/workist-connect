@@ -7,7 +7,7 @@ const stats = [
 
 const Stats = () => {
   return (
-    <div className="bg-primary py-12 sm:py-16">
+    <div className="bg-[#040842] py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
           {stats.map((stat) => (
