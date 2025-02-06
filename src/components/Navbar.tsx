@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, ChevronDown, BookOpen, FileText, TrendingUp, FileCheck, BookText } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
@@ -164,8 +164,8 @@ const Navbar = () => {
                 </button>
 
                 {item.hasSubmenu && activeSubmenu === item.name && (
-                  <div className="absolute left-0 mt-2 w-screen -ml-[50vw] left-1/2 bg-[#040842] shadow-lg">
-                    <div className="max-w-7xl mx-auto">
+                  <div className="absolute left-0 mt-2 w-screen max-w-none transform -translate-x-1/2 left-1/2 bg-[#040842] shadow-lg">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                       {item.name === "For Business" ? (
                         <div className="p-6">
                           <Tabs defaultValue="services" className="w-full">
