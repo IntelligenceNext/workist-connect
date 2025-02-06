@@ -92,30 +92,35 @@ const Hero = () => {
           {/* Trusted By Section */}
           <div className="mt-24 text-center">
             <p className="text-white/80 mb-8 text-sm uppercase tracking-wider">Trusted By</p>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Meta-Logo.png"
-                alt="Meta"
-                className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
-              />
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"
                 alt="IBM"
                 className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg"
-                alt="Microsoft"
+                src="https://upload.wikimedia.org/wikipedia/en/c/c9/Infosys_logo.svg"
+                alt="Infosys"
                 className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
-                alt="Google"
+                src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg"
+                alt="Accenture"
                 className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png"
-                alt="Tesla"
+                src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg"
+                alt="TATA"
+                className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg"
+                alt="Wipro"
+                className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://www.sonata-software.com/sites/default/files/2019-12/sonata-software-logo.png"
+                alt="Sonata Software"
                 className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
             </div>
