@@ -8,7 +8,7 @@ const Family = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="max-w-xl">
             <h2 className="text-4xl font-bold mb-6">
-              We Love Our People Like Family
+              Here For You, Every Step of the Way
             </h2>
             <p className="text-lg mb-9">
               Welcome to Workist, where every individual is valued and cherished like family. 
