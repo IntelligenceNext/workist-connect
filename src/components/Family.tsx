@@ -26,7 +26,7 @@ const Family = () => {
           
           <div className="relative w-full h-[400px] overflow-hidden rounded-lg">
             <img
-              src="/photo-1519389950473-47ba0277781c"
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
               alt="Team collaborating at work"
               className="w-full h-full object-cover"
             />
