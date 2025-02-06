@@ -86,7 +86,7 @@ const StaffingServices = () => {
             </div>
           </div>
         </div>
-
+        
         {/* Trusted By Section */}
         <div className="py-20 bg-[#18003c]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -117,7 +117,7 @@ const StaffingServices = () => {
             </div>
           </div>
         </div>
-
+        
         {/* Job Seeker Section */}
         <div className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -137,7 +137,7 @@ const StaffingServices = () => {
             </div>
           </div>
         </div>
-
+        
         {/* Book a Demo Section */}
         <div className="py-20 bg-cover bg-center" style={{
           backgroundImage: 'url("https://workistforit.in/images/PinkGradient.webp")'
@@ -198,20 +198,41 @@ const StaffingServices = () => {
               </strong>{" "}
               where our staffing agency really knows the ropes.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold mb-4">Technology</h3>
-                <p className="text-gray-600">Software development, IT infrastructure, cybersecurity, and more.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold mb-4">Healthcare</h3>
-                <p className="text-gray-600">Medical professionals, administrative staff, and healthcare specialists.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold mb-4">Finance</h3>
-                <p className="text-gray-600">Banking, accounting, financial analysis, and investment roles.</p>
-              </div>
-            </div>
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <li className="group">
+                <a href="/industries/administrative-staffing" className="flex items-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-4 mb-2">
+                      <Calendar className="h-6 w-6 text-primary" />
+                      <h4 className="text-lg font-semibold">Administrative</h4>
+                    </div>
+                  </div>
+                  <ArrowRight className="h-5 w-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+              </li>
+              <li className="group">
+                <a href="/industries/it" className="flex items-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-4 mb-2">
+                      <Briefcase className="h-6 w-6 text-primary" />
+                      <h4 className="text-lg font-semibold">Information Technology (IT)</h4>
+                    </div>
+                  </div>
+                  <ArrowRight className="h-5 w-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+              </li>
+              <li className="group">
+                <a href="/industries/healthcare" className="flex items-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-4 mb-2">
+                      <Heart className="h-6 w-6 text-primary" />
+                      <h4 className="text-lg font-semibold">Healthcare</h4>
+                    </div>
+                  </div>
+                  <ArrowRight className="h-5 w-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
