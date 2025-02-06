@@ -138,6 +138,51 @@ const StaffingServices = () => {
           </div>
         </div>
 
+        {/* Book a Demo Section */}
+        <div className="py-20 bg-cover bg-center" style={{
+          backgroundImage: 'url("https://workistforit.in/images/PinkGradient.webp")'
+        }}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="text-white">
+                <h2 className="text-4xl font-bold mb-8">
+                  <strong>Book a free demo</strong> to see how we find and place talent
+                </h2>
+                
+                <ul className="space-y-6 text-lg">
+                  <li className="pb-6">
+                    Set up a time with a Hiring Partner to walk through an overview of how we source great talent
+                  </li>
+                  <li className="py-4">
+                    Discover how we make your hire even more productive once they start
+                  </li>
+                  <li className="py-4">
+                    Understand pricing, timing, and how we partner with you every step of the way
+                  </li>
+                </ul>
+
+                <div className="mt-12 mb-24">
+                  <Button 
+                    onClick={() => navigate("/book-demo")}
+                    className="bg-accent hover:bg-accent/90 text-white"
+                  >
+                    Book a Demo
+                  </Button>
+                </div>
+              </div>
+
+              <div>
+                <img
+                  src="https://insightglobal.com/wp-content/uploads/2024/12/DesktopCandidates.png"
+                  alt="Desktop with candidates interface"
+                  className="w-full h-auto rounded-lg shadow-xl"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Our Staffing Solutions Section */}
         <div className="py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
