@@ -35,12 +35,9 @@ const StaffingServices = () => {
       <Navbar />
       <div className="min-h-screen bg-white">
         {/* Hero Section with Gradient Background */}
-        <div 
-          className="relative py-20 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url("https://insightglobal.com/wp-content/uploads/2024/11/SemicircleGradient.png")',
-          }}
-        >
+        <div className="relative py-20 bg-cover bg-center" style={{
+          backgroundImage: 'url("https://insightglobal.com/wp-content/uploads/2024/11/SemicircleGradient.png")',
+        }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-3 gap-8">
               {/* Title Column */}
@@ -63,8 +60,11 @@ const StaffingServices = () => {
                   className="w-[43px] h-[50px] mx-auto"
                 />
                 <h3 className="text-xl font-semibold mt-4 mb-2">Schedule a meeting</h3>
+                <p className="mb-0">
+                  Meet with our talent experts to
+                </p>
                 <p className="mb-4">
-                  Meet with our talent experts to<br />discuss your staffing needs.
+                  discuss your staffing needs.
                 </p>
                 <Button 
                   onClick={() => navigate("/contact")}
@@ -82,8 +82,11 @@ const StaffingServices = () => {
                   className="w-[63px] h-[50px] mx-auto"
                 />
                 <h3 className="text-xl font-semibold mt-4 mb-2">Submit Staffing Request</h3>
+                <p className="mb-0">
+                  Provide your information and
+                </p>
                 <p className="mb-4">
-                  Provide your information and<br />we'll be in touch shortly!
+                  we'll be in touch shortly!
                 </p>
                 <Button 
                   onClick={() => navigate("/contact")}
@@ -132,6 +135,7 @@ const StaffingServices = () => {
           </div>
         </div>
 
+        {/* Services Section */}
         <div className="py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
