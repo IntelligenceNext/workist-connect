@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <Link to="/" className="mb-6">
               <img
-                src="/placeholder.svg"
+                src="https://workistforit.in/images/logo.png"
                 alt="Workist For IT"
                 className="h-16 w-auto"
               />
@@ -65,7 +65,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/workistforitsoc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-white"
@@ -73,7 +73,7 @@ const Footer = () => {
                 <Facebook className="h-6 w-6" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/workistsforit"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-white"
@@ -81,15 +81,7 @@ const Footer = () => {
                 <Linkedin className="h-6 w-6" />
               </a>
               <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/80 hover:text-white"
-              >
-                <Youtube className="h-6 w-6" />
-              </a>
-              <a
-                href="https://twitter.com"
+                href="https://twitter.com/Workistforit"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-white"
@@ -97,7 +89,15 @@ const Footer = () => {
                 <Twitter className="h-6 w-6" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://youtube.com/@Workistforit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-white"
+              >
+                <Youtube className="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.instagram.com/workistforit"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-white"
