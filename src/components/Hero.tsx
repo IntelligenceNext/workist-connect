@@ -94,29 +94,29 @@ const Hero = () => {
             <p className="text-white/80 mb-8 text-sm uppercase tracking-wider">Trusted By</p>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
               <img
-                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=200&h=100&fit=crop&auto=format"
-                alt="Client 1"
-                className="h-12 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Meta-Logo.png"
+                alt="Meta"
+                className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
               <img
-                src="https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=200&h=100&fit=crop&auto=format"
-                alt="Client 2"
-                className="h-12 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"
+                alt="IBM"
+                className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
               <img
-                src="https://images.unsplash.com/photo-1431576901776-e539bd916ba2?w=200&h=100&fit=crop&auto=format"
-                alt="Client 3"
-                className="h-12 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg"
+                alt="Microsoft"
+                className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
               <img
-                src="https://images.unsplash.com/photo-1486718448742-163732cd1544?w=200&h=100&fit=crop&auto=format"
-                alt="Client 4"
-                className="h-12 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                alt="Google"
+                className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
               <img
-                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=200&h=100&fit=crop&auto=format"
-                alt="Client 5"
-                className="h-12 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png"
+                alt="Tesla"
+                className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
             </div>
           </div>
