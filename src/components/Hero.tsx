@@ -93,9 +93,31 @@ const Hero = () => {
           <div className="mt-24 text-center">
             <p className="text-white/80 mb-8 text-sm uppercase tracking-wider">Trusted By</p>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div key={i} className="h-12 bg-white/10 rounded animate-pulse" />
-              ))}
+              <img
+                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=200&h=100&fit=crop&auto=format"
+                alt="Client 1"
+                className="h-12 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=200&h=100&fit=crop&auto=format"
+                alt="Client 2"
+                className="h-12 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1431576901776-e539bd916ba2?w=200&h=100&fit=crop&auto=format"
+                alt="Client 3"
+                className="h-12 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1486718448742-163732cd1544?w=200&h=100&fit=crop&auto=format"
+                alt="Client 4"
+                className="h-12 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=200&h=100&fit=crop&auto=format"
+                alt="Client 5"
+                className="h-12 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+              />
             </div>
           </div>
         </div>
