@@ -1,6 +1,3 @@
-import { ArrowRight } from "lucide-react";
-import { useState } from "react";
-
 interface Service {
   name: string;
   href: string;
@@ -30,7 +27,7 @@ const BusinessSubmenu = ({ services, industries, locations }: BusinessSubmenuPro
 
   return (
     <div className="py-8 px-4 bg-[#001B3D]">
-      <div className="max-w-7xl mx-auto flex space-x-8">
+      <div className="max-w-7xl mx-auto flex space-x-8 pr-[5%]">
         <div className="flex flex-col space-y-2 min-w-[200px]">
           <button
             onClick={() => setActiveTab('services')}
@@ -67,57 +64,19 @@ const BusinessSubmenu = ({ services, industries, locations }: BusinessSubmenuPro
         <div className="flex-1">
           {activeTab === 'services' && (
             <div className="grid grid-cols-3 gap-4">
-              <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
-                <div className="text-[#FF1493] text-2xl">👥</div>
-                <div>
-                  <h3 className="font-semibold text-[#001B3D]">Staffing Services</h3>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
-                <div className="text-[#FF1493] text-2xl">🌲</div>
-                <div>
-                  <h3 className="font-semibold text-[#001B3D]">
-                    Evergreen Professional Services
-                  </h3>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
-                <div className="text-[#FF1493] text-2xl">🧭</div>
-                <div>
-                  <h3 className="font-semibold text-[#001B3D]">
-                    Compass Culture Consulting
-                  </h3>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
-                <div className="text-[#FF1493] text-2xl">👥</div>
-                <div>
-                  <h3 className="font-semibold text-[#001B3D]">
-                    Recruitment Process Outsourcing (RPO)
-                  </h3>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
-                <div className="text-[#FF1493] text-2xl">❤️</div>
-                <div>
-                  <h3 className="font-semibold text-[#001B3D]">
-                    Diversity, Equity, Inclusion, & Belonging
-                  </h3>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg p-6 flex items-start space-x-4">
-                <div className="text-[#FF1493] text-2xl">🏆</div>
-                <div>
-                  <h3 className="font-semibold text-[#001B3D]">
-                    Executive Recruiting
-                  </h3>
-                </div>
-              </div>
+              {services.map((service) => (
+                <a
+                  key={service.name}
+                  href={service.href}
+                  className="bg-white rounded-lg p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow"
+                >
+                  <span className="text-2xl">{service.icon}</span>
+                  <div>
+                    <h3 className="font-semibold text-[#001B3D]">{service.name}</h3>
+                    <p className="text-sm text-gray-600 mt-1">{service.description}</p>
+                  </div>
+                </a>
+              ))}
             </div>
           )}
 
@@ -150,15 +109,6 @@ const BusinessSubmenu = ({ services, industries, locations }: BusinessSubmenuPro
             </div>
           )}
         </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto mt-6">
-        <a
-          href="/services"
-          className="inline-flex items-center text-[#00E6CA] hover:text-[#00E6CA]/90 font-medium"
-        >
-          View all services <ArrowRight className="ml-2 h-4 w-4" />
-        </a>
       </div>
     </div>
   );

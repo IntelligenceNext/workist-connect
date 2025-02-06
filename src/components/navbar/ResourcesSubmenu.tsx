@@ -11,7 +11,7 @@ interface ResourcesSubmenuProps {
 
 const ResourcesSubmenu = ({ resourceLinks }: ResourcesSubmenuProps) => {
   return (
-    <div className="grid grid-cols-2 gap-4 p-6">
+    <div className="grid grid-cols-2 gap-4 p-6 pr-[5%]">
       {resourceLinks.map((link) => (
         <a
           key={link.name}
