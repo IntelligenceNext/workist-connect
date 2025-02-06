@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Briefcase, Users, Heart, Search } from "lucide-react";
+import { ArrowRight, Briefcase, Users, Heart, Search, Calendar, MessageSquare } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -54,11 +54,7 @@ const StaffingServices = () => {
 
               {/* Schedule Meeting Column */}
               <div className="text-white text-center">
-                <img 
-                  src="https://insightglobal.com/wp-content/uploads/2024/11/calendar-days-duotone-solid-1-2.png"
-                  alt="Calendar icon"
-                  className="w-[43px] h-[50px] mx-auto"
-                />
+                <Calendar className="w-[43px] h-[50px] mx-auto text-white" />
                 <h3 className="text-xl font-semibold mt-4 mb-2">Schedule a meeting</h3>
                 <p className="mb-0">
                   Meet with our talent experts to
@@ -76,11 +72,7 @@ const StaffingServices = () => {
 
               {/* Submit Request Column */}
               <div className="text-white text-center">
-                <img 
-                  src="https://insightglobal.com/wp-content/uploads/2024/11/ChatImage.png"
-                  alt="Chat icon"
-                  className="w-[63px] h-[50px] mx-auto"
-                />
+                <MessageSquare className="w-[63px] h-[50px] mx-auto text-white" />
                 <h3 className="text-xl font-semibold mt-4 mb-2">Submit Staffing Request</h3>
                 <p className="mb-0">
                   Provide your information and
