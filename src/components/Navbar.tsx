@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,34 +16,22 @@ const Navbar = () => {
       description: "Connect with top talent for your positions"
     },
     { 
-      name: "Evergreen Professional Services", 
+      name: "Professional Services", 
       href: "/services/professional", 
-      icon: "🌲",
+      icon: "💼",
       description: "Comprehensive professional solutions"
     },
     { 
-      name: "Compass Culture Consulting", 
+      name: "Culture Consulting", 
       href: "/services/culture-consulting", 
-      icon: "🧭",
+      icon: "🎯",
       description: "Transform your organizational culture"
     },
     { 
-      name: "Recruitment Process Outsourcing (RPO)", 
+      name: "Recruitment Process Outsourcing", 
       href: "/services/rpo", 
-      icon: "👥",
+      icon: "🔄",
       description: "Streamline your hiring process"
-    },
-    { 
-      name: "Diversity, Equity, Inclusion, & Belonging", 
-      href: "/services/deib", 
-      icon: "❤️",
-      description: "Build an inclusive workplace"
-    },
-    { 
-      name: "Executive Recruiting", 
-      href: "/services/executive", 
-      icon: "🏆",
-      description: "Find top-tier leadership talent"
     }
   ];
 
@@ -141,24 +130,84 @@ const Navbar = () => {
                   <div className="absolute left-0 mt-2 w-screen -ml-[50vw] left-1/2 bg-[#040842] shadow-lg">
                     <div className="max-w-7xl mx-auto">
                       {item.name === "For Business" ? (
-                        <div className="grid grid-cols-2 gap-4 p-6">
-                          {services.map((service) => (
-                            <a
-                              key={service.name}
-                              href={service.href}
-                              className="flex items-start p-4 rounded-lg hover:bg-[#030631] transition-colors group"
-                            >
-                              <span className="text-2xl mr-4">{service.icon}</span>
-                              <div>
-                                <h3 className="text-white font-medium group-hover:text-accent transition-colors">
-                                  {service.name}
-                                </h3>
-                                <p className="text-gray-300 text-sm mt-1 group-hover:text-white transition-colors">
-                                  {service.description}
-                                </p>
+                        <div className="p-6">
+                          <Tabs defaultValue="services" className="w-full">
+                            <TabsList className="bg-[#030631] text-white mb-6">
+                              <TabsTrigger 
+                                value="services"
+                                className="text-white data-[state=active]:bg-[#040842] data-[state=active]:text-white"
+                              >
+                                Services
+                              </TabsTrigger>
+                              <TabsTrigger 
+                                value="industries"
+                                className="text-white data-[state=active]:bg-[#040842] data-[state=active]:text-white"
+                              >
+                                Industries
+                              </TabsTrigger>
+                              <TabsTrigger 
+                                value="locations"
+                                className="text-white data-[state=active]:bg-[#040842] data-[state=active]:text-white"
+                              >
+                                Locations
+                              </TabsTrigger>
+                            </TabsList>
+                            
+                            <TabsContent value="services" className="mt-0">
+                              <div className="grid grid-cols-2 gap-4">
+                                {services.map((service) => (
+                                  <a
+                                    key={service.name}
+                                    href={service.href}
+                                    className="flex items-start p-4 rounded-lg hover:bg-[#030631] transition-colors group"
+                                  >
+                                    <span className="text-2xl mr-4">{service.icon}</span>
+                                    <div>
+                                      <h3 className="text-white font-medium group-hover:text-accent transition-colors">
+                                        {service.name}
+                                      </h3>
+                                      <p className="text-gray-300 text-sm mt-1 group-hover:text-white transition-colors">
+                                        {service.description}
+                                      </p>
+                                    </div>
+                                  </a>
+                                ))}
                               </div>
-                            </a>
-                          ))}
+                            </TabsContent>
+
+                            <TabsContent value="industries" className="mt-0">
+                              <div className="grid grid-cols-2 gap-4">
+                                {industries.map((industry) => (
+                                  <a
+                                    key={industry.name}
+                                    href={industry.href}
+                                    className="p-4 rounded-lg hover:bg-[#030631] transition-colors group"
+                                  >
+                                    <h3 className="text-white font-medium group-hover:text-accent transition-colors">
+                                      {industry.name}
+                                    </h3>
+                                  </a>
+                                ))}
+                              </div>
+                            </TabsContent>
+
+                            <TabsContent value="locations" className="mt-0">
+                              <div className="grid grid-cols-2 gap-4">
+                                {locations.map((location) => (
+                                  <a
+                                    key={location.name}
+                                    href={location.href}
+                                    className="p-4 rounded-lg hover:bg-[#030631] transition-colors group"
+                                  >
+                                    <h3 className="text-white font-medium group-hover:text-accent transition-colors">
+                                      <span className="mr-2">{location.flag}</span>
+                                      {location.name}
+                                    </h3>
+                                  </a>
+                                ))}
+                              </div>
+                            </TabsContent>
+                          </Tabs>
                         </div>
                       ) : item.name === "For Job Seekers" ? (
                         <div className="grid grid-cols-2 gap-4 p-6">
@@ -179,15 +228,6 @@ const Navbar = () => {
                               </div>
                             </a>
                           ))}
-                          <div className="col-span-2 mt-6 pt-6 border-t border-[#030631]">
-                            <a 
-                              href="/jobs" 
-                              className="text-white hover:text-accent transition-colors font-medium flex items-center"
-                            >
-                              View all opportunities
-                              <ChevronDown className="ml-1 h-4 w-4 rotate-[-90deg]" />
-                            </a>
-                          </div>
                         </div>
                       ) : null}
                     </div>
