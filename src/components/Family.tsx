@@ -11,10 +11,10 @@ const Family = () => {
               We Love Our People Like Family
             </h2>
             <p className="text-lg mb-9">
-              Whether you join us as an in-house team member or consultant, you're family. 
-              We believe in your potential and we are devoted to helping you achieve your biggest, 
-              boldest ambitions. We're here for you and we won't stop until you're exactly where 
-              you want to be.
+              Welcome to Workist, where every individual is valued and cherished like family. 
+              Whether you join us as an in-house team member or as a consultant, we are thrilled 
+              to have you onboard. We believe in your potential and are committed to helping you 
+              achieve your most ambitious goals.
             </p>
             <Button 
               className="bg-white text-[#040842] hover:bg-gray-100"
