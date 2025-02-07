@@ -58,7 +58,7 @@ const RPOHeroSection = () => {
   }
 
   return (
-    <div className="relative min-h-[600px] py-20 px-4 overflow-hidden">
+    <div className="relative min-h-[600px] pt-[10vh] pb-20 px-4 overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
