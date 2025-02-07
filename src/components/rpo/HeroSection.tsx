@@ -1,4 +1,3 @@
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -58,7 +57,7 @@ const RPOHeroSection = () => {
   }
 
   return (
-    <div className="relative min-h-[600px] pt-[10vh] pb-20 px-4 overflow-hidden">
+    <div className="relative min-h-[600px] pt-[15vh] pb-20 px-4 overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
