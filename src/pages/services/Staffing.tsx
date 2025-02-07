@@ -8,7 +8,6 @@ import HeroSection from "@/components/staffing/HeroSection";
 import TrustedBy from "@/components/staffing/TrustedBy";
 import ProcessSection from "@/components/staffing/ProcessSection";
 import IndustrySection from "@/components/staffing/IndustrySection";
-import ThreeLayout from "@/components/staffing/ThreeLayout";
 
 const StaffingServices = () => {
   const navigate = useNavigate();
@@ -85,9 +84,8 @@ const StaffingServices = () => {
           </div>
         </div>
 
-        <ProcessSection />
-        <ThreeLayout />
         <IndustrySection />
+        <ProcessSection />
 
         <div className="bg-[#040842] text-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
