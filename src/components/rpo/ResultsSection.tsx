@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Person, Clock, Trophy } from "lucide-react";
+import { User, Clock, Trophy } from "lucide-react";
 
 const ResultsSection = () => {
   return (
@@ -19,7 +19,7 @@ const ResultsSection = () => {
           <div className="text-center">
             <div className="flex justify-center mb-4">
               <div className="p-4 bg-white/10 rounded-full">
-                <Person className="h-8 w-8 text-white" />
+                <User className="h-8 w-8 text-white" />
               </div>
             </div>
             <div className="text-4xl font-bold text-white mb-2">59</div>
