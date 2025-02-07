@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/deib/HeroSection";
 import InitiativesSection from "@/components/deib/InitiativesSection";
+import DifferentSection from "@/components/deib/DifferentSection";
 import Footer from "@/components/Footer";
 
 const DEIBServices = () => {
@@ -10,6 +11,7 @@ const DEIBServices = () => {
       <Navbar />
       <HeroSection />
       <InitiativesSection />
+      <DifferentSection />
       <Footer />
     </div>
   );
