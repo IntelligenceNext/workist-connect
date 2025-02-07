@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +7,7 @@ import HeroSection from "@/components/staffing/HeroSection";
 import TrustedBy from "@/components/staffing/TrustedBy";
 import ProcessSection from "@/components/staffing/ProcessSection";
 import IndustrySection from "@/components/staffing/IndustrySection";
+import ThreeLayout from "@/components/staffing/ThreeLayout";
 
 const StaffingServices = () => {
   const navigate = useNavigate();
@@ -18,6 +18,9 @@ const StaffingServices = () => {
       <div className="min-h-screen bg-white">
         <HeroSection />
         <TrustedBy />
+        <ProcessSection />
+        <ThreeLayout />
+        <IndustrySection />
         
         {/* Job Seeker Section */}
         <div className="py-12 bg-white">
@@ -83,9 +86,6 @@ const StaffingServices = () => {
             </div>
           </div>
         </div>
-
-        <IndustrySection />
-        <ProcessSection />
 
         <div className="bg-[#040842] text-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
