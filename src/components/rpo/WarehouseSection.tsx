@@ -47,8 +47,8 @@ const WarehouseSection = () => {
           {/* Right Column - Image */}
           <div className="relative h-[400px] rounded-lg overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1577041677443-8bbdfd8cce62?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-              alt="Diverse warehouse workers in safety gear"
+              src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+              alt="Professional labor workers in industrial setting"
               className="w-full h-full object-cover rounded-lg"
             />
           </div>
