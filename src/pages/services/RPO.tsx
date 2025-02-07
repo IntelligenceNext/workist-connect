@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RPOHeroSection from "@/components/rpo/HeroSection";
+import ServicesSection from "@/components/rpo/ServicesSection";
 
 const RPOServices = () => {
   const navigate = useNavigate();
@@ -14,8 +15,7 @@ const RPOServices = () => {
       <Navbar />
       <div className="min-h-screen bg-white">
         <RPOHeroSection />
-        
-        {/* Add other RPO sections here later */}
+        <ServicesSection />
         
         <div className="bg-white text-primary py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
