@@ -78,7 +78,7 @@ const VideoSeriesSection = () => {
 
             <div className="space-y-4">
               <p className="text-lg text-white/90">
-                Join Sarah Anderson, our Chief Diversity Officer, as she shares proven strategies 
+                Join Mylapaka Narsimha, our Chief Executive Officer, as he shares proven strategies 
                 for implementing successful DEIB programs in technology organizations.
               </p>
 
