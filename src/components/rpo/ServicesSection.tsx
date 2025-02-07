@@ -1,11 +1,7 @@
 
-import { Button } from "@/components/ui/button";
 import { Building, GitBranch, Layers } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
 const ServicesSection = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="bg-white py-16">
       {/* Our RPO Services Header */}
@@ -16,13 +12,6 @@ const ServicesSection = () => {
         <p className="text-xl text-[#1A1F2C] mb-8">
           Transforming Your Recruitment Process with Expertise and Efficiency
         </p>
-        <Button 
-          onClick={() => navigate("/contact")}
-          size="lg"
-          className="bg-accent hover:bg-accent/90 text-white"
-        >
-          Get Started Now
-        </Button>
       </div>
 
       {/* Introduction Section */}
