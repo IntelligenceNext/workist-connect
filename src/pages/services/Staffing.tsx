@@ -256,10 +256,10 @@ const StaffingServices = () => {
             </h2>
 
             <div className="relative">
-              {/* Vertical line connecting steps */}
-              <div className="absolute left-[39px] top-0 w-0.5 h-full bg-white/30 md:left-1/2 md:-ml-0.5" />
+              {/* Horizontal line connecting steps */}
+              <div className="hidden md:block absolute top-[60px] left-0 w-full h-0.5 bg-white/30" />
 
-              <div className="space-y-16">
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
                 {[
                   {
                     step: 1,
@@ -286,26 +286,19 @@ const StaffingServices = () => {
                     title: "Hire & Onboard",
                     description: "Hire your perfect candidate, & let us take care of the onboarding"
                   }
-                ].map((item, index) => (
-                  <div key={item.step} className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-                    <div className="flex-1 md:w-1/2">
-                      <div className={`p-6 ${index % 2 === 0 ? 'md:ml-auto md:pr-16' : 'md:mr-auto md:pl-16'}`}>
-                        <h3 className="text-xl font-semibold text-white mb-2">
-                          {item.title}
-                        </h3>
-                        <p className="text-gray-200">
-                          {item.description}
-                        </p>
-                      </div>
+                ].map((item) => (
+                  <div key={item.step} className="relative flex flex-col items-center">
+                    <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center z-10">
+                      <span className="text-primary font-bold text-xl">
+                        {item.step}
+                      </span>
                     </div>
-
-                    <div className="absolute left-0 md:left-1/2 md:-ml-8">
-                      <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white">
-                        <span className="text-primary font-bold text-xl">
-                          {item.step}
-                        </span>
-                      </div>
-                    </div>
+                    <h3 className="text-xl font-semibold text-white mt-6 mb-2 text-center">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-200 text-center text-sm">
+                      {item.description}
+                    </p>
                   </div>
                 ))}
               </div>
