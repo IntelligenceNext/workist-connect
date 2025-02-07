@@ -56,7 +56,7 @@ const HireSection = () => {
           We work for you, providing customized solutions built within your budget, to match your unique staffing requirements. 
           We go beyond identifying talent. We handle the search, candidate curation, onboarding, & payroll.
           <br /><br />
-          Still have questions about using a staffing agency? Call us toll-free: <a href="tel:855-485-8853" className="font-bold hover:text-accent">855-485-8853</a>
+          Still have questions about using a staffing agency? Send email to: <a href="mailto:info@workistforit.com" className="font-bold hover:text-accent">info@workistforit.com</a>
         </p>
 
         <div className="max-w-xl mx-auto bg-white rounded-lg p-8">
