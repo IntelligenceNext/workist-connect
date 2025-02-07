@@ -246,6 +246,73 @@ const StaffingServices = () => {
           </div>
         </div>
 
+        {/* Our Process Section */}
+        <div className="py-20 bg-primary bg-cover bg-center" style={{
+          backgroundImage: 'url("https://workistforit.in/images/ProcessGradient.webp")',
+        }}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center text-white mb-12">
+              Our Process
+            </h2>
+
+            <div className="relative">
+              {/* Vertical line connecting steps */}
+              <div className="absolute left-[39px] top-0 w-0.5 h-full bg-white/30 md:left-1/2 md:-ml-0.5" />
+
+              <div className="space-y-16">
+                {[
+                  {
+                    step: 1,
+                    title: "Reach Out",
+                    description: "Submit a staffing request & tell us what you're looking for"
+                  },
+                  {
+                    step: 2,
+                    title: "Connect",
+                    description: "Your dedicated Hiring Partner reaches out to discuss your unique needs"
+                  },
+                  {
+                    step: 3,
+                    title: "Review Candidates",
+                    description: "We search, screen, & share a curated list of the most qualified candidates"
+                  },
+                  {
+                    step: 4,
+                    title: "Interview & Offer",
+                    description: "We'll schedule or conduct interviews, & help you extend an offer"
+                  },
+                  {
+                    step: 5,
+                    title: "Hire & Onboard",
+                    description: "Hire your perfect candidate, & let us take care of the onboarding"
+                  }
+                ].map((item, index) => (
+                  <div key={item.step} className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                    <div className="flex-1 md:w-1/2">
+                      <div className={`p-6 ${index % 2 === 0 ? 'md:ml-auto md:pr-16' : 'md:mr-auto md:pl-16'}`}>
+                        <h3 className="text-xl font-semibold text-white mb-2">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-200">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="absolute left-0 md:left-1/2 md:-ml-8">
+                      <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white">
+                        <span className="text-primary font-bold text-xl">
+                          {item.step}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Our Staffing Solutions Section */}
         <div className="py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
