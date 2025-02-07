@@ -13,7 +13,7 @@ const ServicesSection = () => {
         <h2 className="text-4xl font-bold text-primary mb-4">
           Our RPO Services
         </h2>
-        <p className="text-xl text-muted mb-8">
+        <p className="text-xl text-[#1A1F2C] mb-8">
           Transforming Your Recruitment Process with Expertise and Efficiency
         </p>
         <Button 
@@ -30,7 +30,7 @@ const ServicesSection = () => {
         <h3 className="text-2xl font-bold text-primary mb-6">
           How We Help You Hire the Right Talent
         </h3>
-        <p className="text-lg text-muted-foreground">
+        <p className="text-lg text-[#222222]">
           At Workist For IT, our talent services experts leverage decades of expertise 
           and access to a vast network of professionals to transform your recruitment 
           process. We'll put our talent engine in motion immediately and effectively 
@@ -51,7 +51,7 @@ const ServicesSection = () => {
             <h4 className="text-xl font-bold text-primary mb-4 text-center">
               Enterprise RPO
             </h4>
-            <p className="text-muted-foreground text-center">
+            <p className="text-[#333333] text-center">
               Outsource your entire recruitment process. We partner with you to meet 
               your long-term hiring goals and own the entire process, from strategy 
               to screening and onboarding.
@@ -68,7 +68,7 @@ const ServicesSection = () => {
             <h4 className="text-xl font-bold text-primary mb-4 text-center">
               Project-Based RPO
             </h4>
-            <p className="text-muted-foreground text-center">
+            <p className="text-[#333333] text-center">
               When you've got a big project or initiative coming up, we partner with 
               you to outsource specific pieces of your recruiting process, providing 
               support where you need it most.
@@ -85,7 +85,7 @@ const ServicesSection = () => {
             <h4 className="text-xl font-bold text-primary mb-4 text-center">
               Hybrid RPO
             </h4>
-            <p className="text-muted-foreground text-center">
+            <p className="text-[#333333] text-center">
               Ideal for businesses with a mix of long-term hiring targets and large 
               initiatives. We build a custom RPO program that delivers the candidates 
               you need with flexibility where you need it.
