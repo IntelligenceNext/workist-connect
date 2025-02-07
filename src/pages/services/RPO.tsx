@@ -8,6 +8,7 @@ import RPOHeroSection from "@/components/rpo/HeroSection";
 import ServicesSection from "@/components/rpo/ServicesSection";
 import ExpertsSection from "@/components/rpo/ExpertsSection";
 import WarehouseSection from "@/components/rpo/WarehouseSection";
+import ResultsSection from "@/components/rpo/ResultsSection";
 
 const RPOServices = () => {
   const navigate = useNavigate();
@@ -20,6 +21,7 @@ const RPOServices = () => {
         <ServicesSection />
         <ExpertsSection />
         <WarehouseSection />
+        <ResultsSection />
         
         <div className="bg-white text-primary py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,4 +50,3 @@ const RPOServices = () => {
 };
 
 export default RPOServices;
-
