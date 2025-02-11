@@ -1,5 +1,7 @@
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import BusinessSubmenu from "./navbar/BusinessSubmenu";
 import JobSeekersSubmenu from "./navbar/JobSeekersSubmenu";
 import ResourcesSubmenu from "./navbar/ResourcesSubmenu";
@@ -195,6 +197,14 @@ const Navbar = () => {
                 )}
               </div>
             ))}
+
+            {/* Action Buttons */}
+            <Button variant="outline" className="bg-transparent text-white border-white hover:bg-white/10">
+              Find a Job
+            </Button>
+            <Button className="bg-[#F97316] hover:bg-[#F97316]/90">
+              Hire Talent
+            </Button>
           </div>
 
           <div className="md:hidden flex items-center">
@@ -214,6 +224,10 @@ const Navbar = () => {
         activeSubmenu={activeSubmenu}
         toggleSubmenu={toggleSubmenu}
         resourceLinks={resourceLinks}
+        services={services}
+        industries={industries}
+        locations={locations}
+        jobSeekerLinks={jobSeekerLinks}
       />
     </nav>
   );
