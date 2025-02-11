@@ -37,8 +37,7 @@ const HeroSection = () => {
         
         {/* Subheading */}
         <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-12 leading-relaxed">
-          Evergreen delivers world-class professional services to clients around the globe 
-          to power innovation and transformation. Grow with us.
+          Success in the modern business landscape requires the perfect blend of cutting-edge technology and skilled professionals. Workist For IT specializes in providing tailored IT services and expert hiring solutions to help your company thrive in a competitive environment.
         </p>
 
         {/* CTA Buttons */}
