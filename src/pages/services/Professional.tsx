@@ -3,6 +3,7 @@ import HeroSection from "@/components/professional/HeroSection";
 import ServicesSection from "@/components/professional/ServicesSection";
 import AboutSection from "@/components/professional/AboutSection";
 import ExpertiseSection from "@/components/professional/ExpertiseSection";
+import SolutionsSection from "@/components/professional/SolutionsSection";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -15,6 +16,7 @@ const Professional = () => {
         <ServicesSection />
         <AboutSection />
         <ExpertiseSection />
+        <SolutionsSection />
       </div>
       <Footer />
     </div>
