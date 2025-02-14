@@ -12,6 +12,7 @@ import DEIBServices from "./pages/services/DEIB";
 import Professional from "./pages/services/Professional";
 import CultureConsulting from "./pages/services/CultureConsulting";
 import Executive from "./pages/services/Executive";
+import ConsumerIndustrial from "./pages/industries/ConsumerIndustrial";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/services/professional" element={<Professional />} />
           <Route path="/services/culture-consulting" element={<CultureConsulting />} />
           <Route path="/services/executive" element={<Executive />} />
+          <Route path="/industries/consumer-industrial" element={<ConsumerIndustrial />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
