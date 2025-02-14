@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Clock, AlertTriangle, Users, ChipIcon } from "lucide-react";
+import { Clock, AlertTriangle, Users, ShipIcon } from "lucide-react";
 
 const ChallengesSection = () => {
   const challenges = [
@@ -20,7 +20,7 @@ const ChallengesSection = () => {
       description: "Finding and retaining skilled workers in a competitive market"
     },
     {
-      icon: <ChipIcon className="h-6 w-6" />,
+      icon: <ShipIcon className="h-6 w-6" />,
       title: "Technology Integration",
       description: "Adopting automation, IoT, and data analytics to stay ahead"
     }
