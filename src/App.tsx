@@ -14,6 +14,7 @@ import CultureConsulting from "./pages/services/CultureConsulting";
 import Executive from "./pages/services/Executive";
 import ConsumerIndustrial from "./pages/industries/ConsumerIndustrial";
 import Logistics from "./pages/industries/Logistics";
+import Government from "./pages/industries/Government";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/services/executive" element={<Executive />} />
           <Route path="/industries/consumer-industrial" element={<ConsumerIndustrial />} />
           <Route path="/industries/logistics" element={<Logistics />} />
+          <Route path="/industries/government" element={<Government />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
