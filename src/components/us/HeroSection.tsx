@@ -35,7 +35,7 @@ const HeroSection = () => {
         <div className="w-32 h-2 bg-gradient-to-r from-[#1EAEDB] to-[#F97316] rounded-full mx-auto mb-8" />
         
         {/* Description */}
-        <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-12 leading-relaxed backdrop-blur-sm bg-black/10 p-6 rounded-xl">
+        <p className="text-lg md:text-xl text-white max-w-3xl mx-auto mb-12 leading-relaxed backdrop-blur-sm bg-black/20 p-6 rounded-xl">
           Workist For IT is proud to operate across the United States, delivering tailored 
           workforce solutions to businesses in every major industry. With a strong presence 
           in key cities and regions, we have collaborated with over 100 top multinational 

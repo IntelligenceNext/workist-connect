@@ -21,25 +21,25 @@ const FootprintSection = () => {
       />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
           Our Nationwide Presence
         </h2>
-        <p className="text-lg text-muted-foreground max-w-3xl mb-12">
+        <p className="text-lg text-gray-700 max-w-3xl mb-12">
           Workist For IT has established a robust network across the United States, enabling us to serve clients in every corner of the country. Our offices and teams are strategically located in:
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {locations.map((location, index) => (
-            <div key={index} className="p-6 bg-white/80 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div key={index} className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-primary/10 rounded-lg">
                   <MapPin className="h-5 w-5 text-primary" />
                 </div>
-                <h3 className="font-semibold text-lg">{location.region}</h3>
+                <h3 className="font-semibold text-lg text-gray-900">{location.region}</h3>
               </div>
               <ul className="space-y-2">
                 {location.cities.map((city, cityIndex) => (
-                  <li key={cityIndex} className="text-muted-foreground">{city}</li>
+                  <li key={cityIndex} className="text-gray-700">{city}</li>
                 ))}
               </ul>
             </div>

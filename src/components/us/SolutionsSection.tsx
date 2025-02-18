@@ -32,7 +32,7 @@ const SolutionsSection = () => {
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden bg-white">
       <div className="absolute inset-0 bg-gradient-to-br from-[#1EAEDB]/5 to-[#F97316]/5" />
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-5"
@@ -42,10 +42,10 @@ const SolutionsSection = () => {
       />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
           Tailored Workforce Solutions for the U.S. Market
         </h2>
-        <p className="text-lg text-muted-foreground max-w-3xl mb-12">
+        <p className="text-lg text-gray-700 max-w-3xl mb-12">
           We offer a wide range of workforce solutions designed to meet the unique needs of businesses in the United States:
         </p>
 
@@ -56,10 +56,10 @@ const SolutionsSection = () => {
               className="group p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
             >
               <div className="bg-primary/10 p-3 rounded-lg w-fit mb-4 group-hover:bg-primary/20 transition-colors">
-                {solution.icon}
+                <div className="text-primary">{solution.icon}</div>
               </div>
-              <h3 className="font-semibold text-xl mb-3">{solution.title}</h3>
-              <p className="text-muted-foreground">{solution.description}</p>
+              <h3 className="font-semibold text-xl mb-3 text-gray-900">{solution.title}</h3>
+              <p className="text-gray-700">{solution.description}</p>
             </div>
           ))}
         </div>

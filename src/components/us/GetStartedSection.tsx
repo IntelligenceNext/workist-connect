@@ -14,10 +14,10 @@ const GetStartedSection = () => {
       />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
           Ready to Transform Your Workforce in the U.S.?
         </h2>
-        <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
+        <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
           At Workist For IT, we're committed to helping businesses across the United States 
           build a workforce that drives efficiency and growth. Let's work together to find 
           the talent and solutions that meet your unique needs.
