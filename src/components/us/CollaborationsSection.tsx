@@ -39,10 +39,10 @@ const CollaborationsSection = () => {
         }}
       />
       <div className="relative z-10 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
           Trusted by 100+ Top Multinational Companies
         </h2>
-        <p className="text-lg text-muted-foreground max-w-3xl mb-12">
+        <p className="text-lg text-gray-700 max-w-3xl mb-12">
           Workist For IT has earned the trust of over 100 top multinational companies (MNCs) across the United States. Our collaborations span industries such as:
         </p>
 
@@ -50,11 +50,11 @@ const CollaborationsSection = () => {
           {industries.map((industry, index) => (
             <div 
               key={index} 
-              className={`p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-br ${industry.gradient}`}
+              className={`p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-br ${industry.gradient} backdrop-blur-sm`}
             >
               <div className="bg-white p-3 rounded-full w-fit mb-4">{industry.icon}</div>
-              <h3 className="font-semibold text-xl mb-3">{industry.title}</h3>
-              <p className="text-muted-foreground">{industry.description}</p>
+              <h3 className="font-semibold text-xl mb-3 text-gray-900">{industry.title}</h3>
+              <p className="text-gray-700">{industry.description}</p>
             </div>
           ))}
         </div>

@@ -30,10 +30,10 @@ const SuccessSection = () => {
         }}
       />
       <div className="relative z-10 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
           Success Stories: Driving Growth Across the U.S.
         </h2>
-        <p className="text-lg text-muted-foreground max-w-3xl mb-12">
+        <p className="text-lg text-gray-700 max-w-3xl mb-12">
           Our solutions have helped businesses across the United States achieve remarkable results:
         </p>
 
@@ -41,15 +41,15 @@ const SuccessSection = () => {
           {caseStudies.map((study, index) => (
             <div 
               key={index} 
-              className={`p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-br ${study.gradient}`}
+              className={`p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-br ${study.gradient} backdrop-blur-sm`}
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-white p-2 rounded-lg">
                   <TrendingUp className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold text-xl">{study.title}</h3>
+                <h3 className="font-semibold text-xl text-gray-900">{study.title}</h3>
               </div>
-              <p className="text-muted-foreground">{study.description}</p>
+              <p className="text-gray-700">{study.description}</p>
             </div>
           ))}
         </div>
