@@ -11,6 +11,7 @@ import ConstructionEnergy from './pages/industries/ConstructionEnergy.tsx'
 import Government from './pages/industries/Government.tsx'
 import LifeSciences from './pages/industries/LifeSciences.tsx'
 import Logistics from './pages/industries/Logistics.tsx'
+import Aviation from './pages/industries/Aviation.tsx'
 import Staffing from './pages/services/Staffing.tsx'
 import Professional from './pages/services/Professional.tsx'
 import CultureConsulting from './pages/services/CultureConsulting.tsx'
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "/industries/logistics",
     element: <Logistics />
+  },
+  {
+    path: "/industries/aviation",
+    element: <Aviation />
   },
   {
     path: "/services/staffing",
