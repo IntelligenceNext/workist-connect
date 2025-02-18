@@ -1,6 +1,8 @@
-import HeroSection from "@/components/healthcare/HeroSection";
+
+import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import HeroSection from "@/components/healthcare/HeroSection";
 
 const Healthcare = () => {
   return (
@@ -72,7 +74,7 @@ const Healthcare = () => {
               <li>Industry Expertise: We understand the complexities of healthcare and provide solutions tailored to your organization.</li>
               <li>Talent Sourcing: Our extensive network ensures access to highly skilled professionals.</li>
               <li>Rigorous Screening: We conduct thorough assessments to ensure candidates meet your technical and cultural requirements.</li>
-              <li>Scalable Solutions: Whether you need temporary staff for a project or permanent hires for long-term growth, we’ve got you covered.</li>
+              <li>Scalable Solutions: Whether you need temporary staff for a project or permanent hires for long-term growth, we've got you covered.</li>
               <li>Ongoing Support: We provide continuous support to ensure your workforce performs at its best.</li>
             </ul>
             <Button 
@@ -114,12 +116,12 @@ const Healthcare = () => {
               Ready to Transform Your Healthcare Workforce?
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
-              At Workist For IT, we’re committed to helping healthcare organizations build a workforce that drives efficiency and growth. 
-              Let’s work together to find the talent and solutions that meet your unique needs. Contact us today to get started.
+              At Workist For IT, we're committed to helping healthcare organizations build a workforce that drives efficiency and growth. 
+              Let's work together to find the talent and solutions that meet your unique needs. Contact us today to get started.
             </p>
             <Button 
               size="lg"
-              className="bg-[#F97316] hover:bg-[#F97316]/90 text-white text-lg px-8 py-6 h-auto"
+              className="bg-[#F97316] hover:bg-[#F97316]/90 text-white text-lg px-8 py-6 h-auto mr-4"
             >
               Contact Us Today
             </Button>
