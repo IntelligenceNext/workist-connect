@@ -13,6 +13,7 @@ import Professional from "./pages/services/Professional";
 import CultureConsulting from "./pages/services/CultureConsulting";
 import Executive from "./pages/services/Executive";
 import ConsumerIndustrial from "./pages/industries/ConsumerIndustrial";
+import ConstructionEnergy from "./pages/industries/ConstructionEnergy";
 import Logistics from "./pages/industries/Logistics";
 import Government from "./pages/industries/Government";
 import LifeSciences from "./pages/industries/LifeSciences";
@@ -34,10 +35,10 @@ const App = () => (
           <Route path="/services/culture-consulting" element={<CultureConsulting />} />
           <Route path="/services/executive" element={<Executive />} />
           <Route path="/industries/consumer-industrial" element={<ConsumerIndustrial />} />
+          <Route path="/industries/construction-energy" element={<ConstructionEnergy />} />
           <Route path="/industries/logistics" element={<Logistics />} />
           <Route path="/industries/government" element={<Government />} />
           <Route path="/industries/life-sciences" element={<LifeSciences />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
