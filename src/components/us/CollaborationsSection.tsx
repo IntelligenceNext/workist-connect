@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Building2, Heartbeat, Factory, Truck } from "lucide-react";
+import { Building2, Users, Factory, Truck } from "lucide-react";
 
 const CollaborationsSection = () => {
   const industries = [
@@ -10,7 +10,7 @@ const CollaborationsSection = () => {
       description: "Partnering with leading tech giants to provide IT talent and innovation solutions."
     },
     {
-      icon: <Heartbeat className="h-8 w-8" />,
+      icon: <Users className="h-8 w-8" />,
       title: "Healthcare",
       description: "Supporting hospitals, clinics, and pharmaceutical companies with skilled healthcare professionals."
     },
