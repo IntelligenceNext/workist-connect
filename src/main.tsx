@@ -19,6 +19,7 @@ import RPO from './pages/services/RPO.tsx'
 import DEIB from './pages/services/DEIB.tsx'
 import Executive from './pages/services/Executive.tsx'
 import US from './pages/locations/US.tsx'
+import India from './pages/locations/India.tsx'
 
 const router = createBrowserRouter([
   {
@@ -85,6 +86,10 @@ const router = createBrowserRouter([
   {
     path: "/locations/us",
     element: <US />
+  },
+  {
+    path: "/locations/india",
+    element: <India />
   }
 ])
 
