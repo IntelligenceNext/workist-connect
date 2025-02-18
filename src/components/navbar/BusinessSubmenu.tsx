@@ -1,89 +1,123 @@
 
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
-interface BusinessSubmenuProps {
-  services?: Array<{
-    name: string;
-    href: string;
-    icon: string;
-    description: string;
-  }>;
-  industries?: Array<{
-    name: string;
-    href: string;
-  }>;
-  locations?: Array<{
-    name: string;
-    flag: string;
-    href: string;
-  }>;
+interface Service {
+  name: string;
+  href: string;
+  icon: string;
+  description: string;
 }
 
-const BusinessSubmenu = ({}: BusinessSubmenuProps) => {
+interface Industry {
+  name: string;
+  href: string;
+}
+
+interface Location {
+  name: string;
+  flag: string;
+  href: string;
+}
+
+interface BusinessSubmenuProps {
+  services: Service[];
+  industries: Industry[];
+  locations: Location[];
+}
+
+const BusinessSubmenu = ({ services, industries, locations }: BusinessSubmenuProps) => {
+  const [activeTab, setActiveTab] = useState('services');
+  const isMobile = useIsMobile();
+
   return (
-    <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Business</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <div className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <div className="grid gap-6">
-                <Link to="/industries/consumer-industrial" className="group grid h-fit w-full items-center justify-start gap-1">
-                  <div className="text-sm font-medium leading-none group-hover:underline">
-                    Consumer & Industrial
+    <div className={`${isMobile ? 'py-4' : 'py-8'} px-4 bg-[#001B3D]`}>
+      <div className={`${isMobile ? '' : 'max-w-7xl mx-auto'} flex ${isMobile ? 'flex-col' : 'space-x-8'} ${isMobile ? 'pr-0' : 'pr-[5%]'}`}>
+        {/* Tabs */}
+        <div className={`flex ${isMobile ? 'mb-4 overflow-x-auto' : 'flex-col'} space-x-2 md:space-x-0 md:space-y-2 ${isMobile ? 'min-w-0' : 'min-w-[200px]'}`}>
+          <button
+            onClick={() => setActiveTab('services')}
+            className={`px-4 py-2 text-sm md:px-6 md:py-3 text-left rounded-lg font-medium transition-colors whitespace-nowrap ${
+              activeTab === 'services' 
+                ? 'bg-white text-[#001B3D]' 
+                : 'text-white hover:bg-white/10'
+            }`}
+          >
+            Services
+          </button>
+          <button
+            onClick={() => setActiveTab('industries')}
+            className={`px-4 py-2 text-sm md:px-6 md:py-3 text-left rounded-lg font-medium transition-colors whitespace-nowrap ${
+              activeTab === 'industries' 
+                ? 'bg-white text-[#001B3D]' 
+                : 'text-white hover:bg-white/10'
+            }`}
+          >
+            Industries
+          </button>
+          <button
+            onClick={() => setActiveTab('locations')}
+            className={`px-4 py-2 text-sm md:px-6 md:py-3 text-left rounded-lg font-medium transition-colors whitespace-nowrap ${
+              activeTab === 'locations' 
+                ? 'bg-white text-[#001B3D]' 
+                : 'text-white hover:bg-white/10'
+            }`}
+          >
+            Locations
+          </button>
+        </div>
+
+        {/* Content */}
+        <div className="flex-1 overflow-x-hidden">
+          {activeTab === 'services' && (
+            <div className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-3'} gap-4`}>
+              {services.map((service) => (
+                <a
+                  key={service.name}
+                  href={service.href}
+                  className="bg-white rounded-lg p-4 md:p-6 flex items-start space-x-4 hover:shadow-lg transition-shadow"
+                >
+                  <span className="text-2xl">{service.icon}</span>
+                  <div>
+                    <h3 className="font-semibold text-[#001B3D] text-sm md:text-base">{service.name}</h3>
+                    <p className="text-xs md:text-sm text-gray-600 mt-1">{service.description}</p>
                   </div>
-                  <div className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                    Manufacturing & Consumer Goods
-                  </div>
-                </Link>
-                <Link to="/industries/construction-energy" className="group grid h-fit w-full items-center justify-start gap-1">
-                  <div className="text-sm font-medium leading-none group-hover:underline">
-                    Construction & Energy
-                  </div>
-                  <div className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                    Building & Powering the Future
-                  </div>
-                </Link>
-                <Link to="/industries/logistics" className="group grid h-fit w-full items-center justify-start gap-1">
-                  <div className="text-sm font-medium leading-none group-hover:underline">
-                    Logistics & Distribution
-                  </div>
-                  <div className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                    Supply Chain & Transportation
-                  </div>
-                </Link>
-              </div>
-              <div className="grid gap-6">
-                <Link to="/industries/life-sciences" className="group grid h-fit w-full items-center justify-start gap-1">
-                  <div className="text-sm font-medium leading-none group-hover:underline">
-                    Life Sciences
-                  </div>
-                  <div className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                    Healthcare & Pharmaceuticals
-                  </div>
-                </Link>
-                <Link to="/industries/government" className="group grid h-fit w-full items-center justify-start gap-1">
-                  <div className="text-sm font-medium leading-none group-hover:underline">
-                    Government
-                  </div>
-                  <div className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                    Public Sector Solutions
-                  </div>
-                </Link>
-              </div>
+                </a>
+              ))}
             </div>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+          )}
+
+          {activeTab === 'industries' && (
+            <div className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-2'} gap-4`}>
+              {industries.map((industry) => (
+                <a
+                  key={industry.name}
+                  href={industry.href}
+                  className="bg-white rounded-lg p-4 md:p-6 hover:bg-gray-50 transition-colors"
+                >
+                  <h3 className="font-semibold text-[#001B3D] text-sm md:text-base">{industry.name}</h3>
+                </a>
+              ))}
+            </div>
+          )}
+
+          {activeTab === 'locations' && (
+            <div className={`grid ${isMobile ? 'grid-cols-1' : 'grid-cols-2'} gap-4`}>
+              {locations.map((location) => (
+                <a
+                  key={location.name}
+                  href={location.href}
+                  className="bg-white rounded-lg p-4 md:p-6 hover:bg-gray-50 transition-colors flex items-center space-x-2"
+                >
+                  <span className="text-2xl">{location.flag}</span>
+                  <h3 className="font-semibold text-[#001B3D] text-sm md:text-base">{location.name}</h3>
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
   );
 };
 

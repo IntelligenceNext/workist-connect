@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -178,7 +179,13 @@ const Navbar = () => {
                 {item.hasSubmenu && activeSubmenu === item.name && (
                   <div className="absolute left-0 mt-2 w-screen max-w-none transform -translate-x-1/2 left-1/2">
                     <div className="max-w-7xl mx-auto">
-                      {item.name === "For Business" && <BusinessSubmenu />}
+                      {item.name === "For Business" && (
+                        <BusinessSubmenu 
+                          services={services}
+                          industries={industries}
+                          locations={locations}
+                        />
+                      )}
                       {item.name === "For Job Seekers" && (
                         <JobSeekersSubmenu jobSeekerLinks={jobSeekerLinks} />
                       )}
