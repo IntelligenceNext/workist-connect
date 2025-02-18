@@ -11,8 +11,16 @@ const FootprintSection = () => {
   ];
 
   return (
-    <section className="py-20">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-orange-50" />
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-5"
+        style={{
+          backgroundImage: 'url("https://images.unsplash.com/photo-1508433957232-3107f5fd5995?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80")',
+        }}
+      />
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
           Our Nationwide Presence
         </h2>
@@ -22,9 +30,11 @@ const FootprintSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {locations.map((location, index) => (
-            <div key={index} className="p-6 bg-white rounded-lg shadow-md">
+            <div key={index} className="p-6 bg-white/80 backdrop-blur-sm rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="flex items-center gap-3 mb-4">
-                <MapPin className="h-5 w-5 text-primary" />
+                <div className="p-2 bg-primary/10 rounded-lg">
+                  <MapPin className="h-5 w-5 text-primary" />
+                </div>
                 <h3 className="font-semibold text-lg">{location.region}</h3>
               </div>
               <ul className="space-y-2">
@@ -38,8 +48,9 @@ const FootprintSection = () => {
 
         <Button 
           size="lg"
-          className="bg-primary hover:bg-primary/90 text-white"
+          className="bg-primary hover:bg-primary/90 text-white shadow-lg"
         >
+          <MapPin className="mr-2 h-5 w-5" />
           Find Us Near You
         </Button>
       </div>

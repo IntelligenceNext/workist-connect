@@ -32,8 +32,16 @@ const SolutionsSection = () => {
   ];
 
   return (
-    <section className="py-20">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1EAEDB]/5 to-[#F97316]/5" />
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-5"
+        style={{
+          backgroundImage: 'url("https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80")',
+        }}
+      />
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
           Tailored Workforce Solutions for the U.S. Market
         </h2>
@@ -43,8 +51,13 @@ const SolutionsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {solutions.map((solution, index) => (
-            <div key={index} className="p-6 bg-white rounded-lg shadow-md">
-              <div className="text-primary mb-4">{solution.icon}</div>
+            <div 
+              key={index} 
+              className="group p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
+            >
+              <div className="bg-primary/10 p-3 rounded-lg w-fit mb-4 group-hover:bg-primary/20 transition-colors">
+                {solution.icon}
+              </div>
               <h3 className="font-semibold text-xl mb-3">{solution.title}</h3>
               <p className="text-muted-foreground">{solution.description}</p>
             </div>
@@ -53,7 +66,7 @@ const SolutionsSection = () => {
 
         <Button 
           size="lg"
-          className="bg-primary hover:bg-primary/90 text-white"
+          className="bg-[#F97316] hover:bg-[#F97316]/90 text-white shadow-lg"
         >
           Discover Our Workforce Solutions
         </Button>

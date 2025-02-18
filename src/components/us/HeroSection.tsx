@@ -7,21 +7,21 @@ const HeroSection = () => {
     <div className="relative min-h-[600px] pt-[15vh] pb-20 px-4 overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center animate-fade-in"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1508433957232-3107f5fd5995?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80")',
+          backgroundImage: 'url("https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80")',
         }}
       />
-      <div className="absolute inset-0 bg-primary/80" />
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto text-center">
         {/* Icons */}
         <div className="flex justify-center gap-8 mb-8">
-          <div className="p-4 bg-white/10 rounded-full backdrop-blur-sm">
+          <div className="p-4 bg-white/10 rounded-full backdrop-blur-sm animate-float">
             <MapPin className="h-8 w-8 text-white" />
           </div>
-          <div className="p-4 bg-white/10 rounded-full backdrop-blur-sm">
+          <div className="p-4 bg-white/10 rounded-full backdrop-blur-sm animate-float delay-150">
             <Building className="h-8 w-8 text-white" />
           </div>
         </div>
@@ -35,19 +35,18 @@ const HeroSection = () => {
         <div className="w-32 h-2 bg-gradient-to-r from-[#1EAEDB] to-[#F97316] rounded-full mx-auto mb-8" />
         
         {/* Description */}
-        <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-12 leading-relaxed">
+        <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-12 leading-relaxed backdrop-blur-sm bg-black/10 p-6 rounded-xl">
           Workist For IT is proud to operate across the United States, delivering tailored 
           workforce solutions to businesses in every major industry. With a strong presence 
           in key cities and regions, we have collaborated with over 100 top multinational 
           companies (MNCs) to provide skilled talent, innovative staffing solutions, and 
-          strategic workforce planning. Whether you're in tech, healthcare, manufacturing, 
-          or logistics, we're here to support your growth and success.
+          strategic workforce planning.
         </p>
 
         {/* CTA Button */}
         <Button 
           size="lg"
-          className="bg-[#F97316] hover:bg-[#F97316]/90 text-white text-lg px-8 py-6 h-auto"
+          className="bg-[#F97316] hover:bg-[#F97316]/90 text-white text-lg px-8 py-6 h-auto animate-pulse"
         >
           Explore Our U.S. Operations
         </Button>
