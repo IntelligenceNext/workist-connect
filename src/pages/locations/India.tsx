@@ -2,7 +2,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/india/HeroSection";
-import FootprintSection from "@/components/india/FootprintSection";
 import CollaborationsSection from "@/components/india/CollaborationsSection";
 import SolutionsSection from "@/components/india/SolutionsSection";
 import SuccessSection from "@/components/india/SuccessSection";
@@ -17,7 +16,6 @@ const India = () => {
     <div>
       <Navbar />
       <HeroSection />
-      <FootprintSection />
       <CollaborationsSection />
       <SolutionsSection />
       <SuccessSection />

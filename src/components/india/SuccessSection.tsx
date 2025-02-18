@@ -6,60 +6,64 @@ const SuccessSection = () => {
   const caseStudies = [
     {
       title: "Tech Success in Bengaluru",
-      description: "Provided a tech company in Bengaluru with a team of software engineers, accelerating product development by 30%.",
-      gradient: "from-[#FF9933]/10 to-[#FF9933]/20"
+      description: "Provided a tech company with a team of software engineers, accelerating product development by 30%.",
+      metric: "+30%",
+      color: "from-[#FF9933] to-[#FF5733]"
     },
     {
       title: "Healthcare Excellence in Mumbai",
-      description: "Staffed a healthcare facility in Mumbai with nurses and administrative staff, improving patient care efficiency by 25%.",
-      gradient: "from-[#138808]/10 to-[#138808]/20"
+      description: "Staffed a healthcare facility with nurses and administrative staff, improving patient care efficiency by 25%.",
+      metric: "+25%",
+      color: "from-[#138808] to-[#0D6B0D]"
     },
     {
       title: "Manufacturing Innovation in Pune",
-      description: "Recruited a logistics team for a manufacturing company in Pune, reducing supply chain costs by 20%.",
-      gradient: "from-[#FF9933]/10 to-[#138808]/20"
+      description: "Recruited a logistics team for a manufacturing company, reducing supply chain costs by 20%.",
+      metric: "-20%",
+      color: "from-[#FF9933] to-[#138808]"
     }
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center opacity-5"
-        style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80")',
-        }}
-      />
-      <div className="relative z-10 max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-          Success Stories: Driving Growth Across India
-        </h2>
-        <p className="text-lg text-gray-700 max-w-3xl mb-12">
-          Our solutions have helped businesses across India achieve remarkable results:
-        </p>
+    <section className="py-20 relative overflow-hidden bg-[#F8F9FA]">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 animate-fade-in">
+            Success Stories
+          </h2>
+          <div className="w-24 h-1 bg-[#FF9933] mx-auto mb-8 animate-fade-in delay-100" />
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8">
           {caseStudies.map((study, index) => (
             <div 
               key={index} 
-              className={`p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-br ${study.gradient} backdrop-blur-sm`}
+              className="relative group"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="bg-white p-2 rounded-lg">
-                  <TrendingUp className="h-6 w-6 text-[#FF9933]" />
+              <div className={`absolute inset-0 bg-gradient-to-br ${study.color} rounded-2xl opacity-10 group-hover:opacity-20 transition-opacity`} />
+              <div className="relative bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in"
+                   style={{ animationDelay: `${index * 200}ms` }}>
+                <div className="flex items-center justify-between mb-6">
+                  <TrendingUp className="h-8 w-8 text-[#FF9933]" />
+                  <span className="text-3xl font-bold bg-gradient-to-r from-[#FF9933] to-[#138808] bg-clip-text text-transparent">
+                    {study.metric}
+                  </span>
                 </div>
-                <h3 className="font-semibold text-xl text-gray-900">{study.title}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">{study.title}</h3>
+                <p className="text-gray-600">{study.description}</p>
               </div>
-              <p className="text-gray-700">{study.description}</p>
             </div>
           ))}
         </div>
 
-        <Button 
-          size="lg"
-          className="bg-[#FF9933] hover:bg-[#FF9933]/90 text-white shadow-lg"
-        >
-          Read More Success Stories
-        </Button>
+        <div className="text-center mt-12">
+          <Button 
+            size="lg"
+            className="bg-[#1A1F2C] hover:bg-[#1A1F2C]/90 text-white shadow-lg animate-pulse"
+          >
+            Read More Success Stories
+          </Button>
+        </div>
       </div>
     </section>
   );
