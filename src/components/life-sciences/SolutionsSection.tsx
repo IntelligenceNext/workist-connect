@@ -1,11 +1,11 @@
 
-import { Flask, FileCheck, ClipboardList, Database, Users } from "lucide-react";
+import { Microscope, FileCheck, ClipboardList, Database, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const SolutionsSection = () => {
   const solutions = [
     {
-      icon: <Flask className="h-6 w-6" />,
+      icon: <Microscope className="h-6 w-6" />,
       title: "Research and Development",
       description: "Scientists, researchers, and lab technicians to drive innovation"
     },
