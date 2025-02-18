@@ -18,6 +18,7 @@ import CultureConsulting from './pages/services/CultureConsulting.tsx'
 import RPO from './pages/services/RPO.tsx'
 import DEIB from './pages/services/DEIB.tsx'
 import Executive from './pages/services/Executive.tsx'
+import US from './pages/locations/US.tsx'
 
 const router = createBrowserRouter([
   {
@@ -80,6 +81,10 @@ const router = createBrowserRouter([
   {
     path: "/services/executive",
     element: <Executive />
+  },
+  {
+    path: "/locations/us",
+    element: <US />
   }
 ])
 
