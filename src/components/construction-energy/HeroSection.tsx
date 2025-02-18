@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Building2, Energy } from "lucide-react";
+import { Building2, Zap } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -22,7 +22,7 @@ const HeroSection = () => {
             <Building2 className="h-8 w-8 text-white" />
           </div>
           <div className="p-4 bg-white/10 rounded-full backdrop-blur-sm">
-            <Energy className="h-8 w-8 text-white" />
+            <Zap className="h-8 w-8 text-white" />
           </div>
         </div>
 
