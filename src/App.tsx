@@ -17,6 +17,7 @@ import ConstructionEnergy from "./pages/industries/ConstructionEnergy";
 import Logistics from "./pages/industries/Logistics";
 import Government from "./pages/industries/Government";
 import LifeSciences from "./pages/industries/LifeSciences";
+import Healthcare from "./pages/industries/Healthcare";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/industries/logistics" element={<Logistics />} />
           <Route path="/industries/government" element={<Government />} />
           <Route path="/industries/life-sciences" element={<LifeSciences />} />
+          <Route path="/industries/healthcare" element={<Healthcare />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
