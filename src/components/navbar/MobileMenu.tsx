@@ -21,9 +21,21 @@ interface MobileMenuProps {
     icon: string;
     description: string;
   }>;
-  services: any[];
-  industries: any[];
-  locations: any[];
+  services: Array<{
+    name: string;
+    href: string;
+    icon: string;
+    description: string;
+  }>;
+  industries: Array<{
+    name: string;
+    href: string;
+  }>;
+  locations: Array<{
+    name: string;
+    flag: string;
+    href: string;
+  }>;
   jobSeekerLinks: any[];
 }
 
@@ -69,11 +81,7 @@ const MobileMenu = ({
             {item.hasSubmenu && activeSubmenu === item.name && (
               <div className="bg-[#001B3D]/50 px-2 py-4">
                 {item.name === "For Business" && (
-                  <BusinessSubmenu 
-                    services={services}
-                    industries={industries}
-                    locations={locations}
-                  />
+                  <BusinessSubmenu />
                 )}
                 {item.name === "For Job Seekers" && (
                   <JobSeekersSubmenu jobSeekerLinks={jobSeekerLinks} />

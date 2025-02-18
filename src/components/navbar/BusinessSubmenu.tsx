@@ -7,7 +7,25 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Link } from "react-router-dom";
 
-const BusinessSubmenu = () => {
+interface BusinessSubmenuProps {
+  services?: Array<{
+    name: string;
+    href: string;
+    icon: string;
+    description: string;
+  }>;
+  industries?: Array<{
+    name: string;
+    href: string;
+  }>;
+  locations?: Array<{
+    name: string;
+    flag: string;
+    href: string;
+  }>;
+}
+
+const BusinessSubmenu = ({}: BusinessSubmenuProps) => {
   return (
     <NavigationMenuItem>
       <NavigationMenuTrigger>Business</NavigationMenuTrigger>
