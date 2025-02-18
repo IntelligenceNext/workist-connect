@@ -9,49 +9,103 @@ const Healthcare = () => {
     <div>
       <Navbar />
       <HeroSection />
-      <section className="py-20 bg-gradient-to-br from-white to-blue-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              Addressing the Challenges of Modern Healthcare
-            </h2>
-            <p className="text-lg text-gray-800 max-w-3xl mx-auto mb-12">
-              The healthcare sector faces unique challenges, including:
-            </p>
-            <ul className="list-disc list-inside text-lg text-gray-700 max-w-3xl mx-auto mb-12">
-              <li>Staffing Shortages: Finding and retaining qualified healthcare professionals in a competitive market.</li>
-              <li>Patient Care Demands: Delivering high-quality care while managing increasing patient volumes.</li>
-              <li>Regulatory Compliance: Navigating complex healthcare laws and regulations.</li>
-              <li>Technology Integration: Adopting electronic health records (EHRs), telemedicine, and other digital tools.</li>
-            </ul>
-            <p className="text-lg text-gray-800 max-w-3xl mx-auto mb-12">
-              At Workist For IT, we understand these challenges and provide workforce solutions that address them effectively.
-            </p>
-            <Button 
-              size="lg"
-              className="bg-[#F97316] hover:bg-[#F97316]/90 text-white text-lg px-8 py-6 h-auto"
-            >
-              Learn How We Can Help
-            </Button>
+      <section className="relative py-20">
+        {/* Background Image with Overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80")',
+          }}
+        />
+        <div className="absolute inset-0 bg-primary/90" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-white">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Addressing the Challenges of Modern Healthcare
+              </h2>
+              <div className="w-32 h-2 bg-[#F97316] rounded-full mb-8" />
+              <ul className="space-y-4 text-lg">
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#F97316]" />
+                  <span>Staffing Shortages: Finding and retaining qualified healthcare professionals in a competitive market.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#F97316]" />
+                  <span>Patient Care Demands: Delivering high-quality care while managing increasing patient volumes.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#F97316]" />
+                  <span>Regulatory Compliance: Navigating complex healthcare laws and regulations.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#F97316]" />
+                  <span>Technology Integration: Adopting electronic health records (EHRs), telemedicine, and other digital tools.</span>
+                </li>
+              </ul>
+              <Button 
+                size="lg"
+                className="bg-[#F97316] hover:bg-[#F97316]/90 text-white text-lg px-8 py-6 h-auto mt-8"
+              >
+                Learn How We Can Help
+              </Button>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+              <p className="text-white text-lg leading-relaxed">
+                At Workist For IT, we understand these challenges and provide workforce solutions that address them effectively. Our comprehensive approach ensures that healthcare organizations can focus on what matters most: providing exceptional patient care.
+              </p>
+            </div>
           </div>
         </div>
       </section>
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              Tailored Workforce Solutions for Healthcare
-            </h2>
-            <p className="text-lg text-gray-800 max-w-3xl mx-auto mb-12">
-              We offer a wide range of staffing and workforce solutions to meet the needs of the healthcare industry:
-            </p>
-            <ul className="list-disc list-inside text-lg text-gray-700 max-w-3xl mx-auto mb-12">
-              <li>Clinical Staff: Doctors, nurses, and allied health professionals to deliver exceptional patient care.</li>
-              <li>Administrative Support: Skilled staff for medical billing, scheduling, and office management.</li>
-              <li>Healthcare IT Specialists: Experts in EHR systems, telemedicine, and healthcare software.</li>
-              <li>Compliance and Regulatory Experts: Professionals to ensure adherence to healthcare laws and standards.</li>
-              <li>Leadership Talent: Executives and managers to oversee operations and drive strategic growth.</li>
-            </ul>
+
+      <section className="py-20 relative overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80")',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 to-primary/80" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+            Tailored Workforce Solutions for Healthcare
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Clinical Staff",
+                description: "Doctors, nurses, and allied health professionals to deliver exceptional patient care."
+              },
+              {
+                title: "Administrative Support",
+                description: "Skilled staff for medical billing, scheduling, and office management."
+              },
+              {
+                title: "Healthcare IT Specialists",
+                description: "Experts in EHR systems, telemedicine, and healthcare software."
+              },
+              {
+                title: "Compliance Experts",
+                description: "Professionals to ensure adherence to healthcare laws and standards."
+              },
+              {
+                title: "Leadership Talent",
+                description: "Executives and managers to oversee operations and drive strategic growth."
+              }
+            ].map((item, index) => (
+              <div 
+                key={index} 
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors"
+              >
+                <h3 className="text-xl font-semibold text-white mb-4">{item.title}</h3>
+                <p className="text-white/90">{item.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
             <Button 
               size="lg"
               className="bg-[#F97316] hover:bg-[#F97316]/90 text-white text-lg px-8 py-6 h-auto"
@@ -61,45 +115,94 @@ const Healthcare = () => {
           </div>
         </div>
       </section>
-      <section className="py-20 bg-gradient-to-br from-white via-blue-50 to-purple-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              Our Proven Approach to Healthcare Staffing
-            </h2>
-            <p className="text-lg text-gray-800 max-w-3xl mx-auto mb-12">
-              At Workist For IT, we take a strategic and customized approach to meet the unique needs of the healthcare sector:
-            </p>
-            <ul className="list-disc list-inside text-lg text-gray-700 max-w-3xl mx-auto mb-12">
-              <li>Industry Expertise: We understand the complexities of healthcare and provide solutions tailored to your organization.</li>
-              <li>Talent Sourcing: Our extensive network ensures access to highly skilled professionals.</li>
-              <li>Rigorous Screening: We conduct thorough assessments to ensure candidates meet your technical and cultural requirements.</li>
-              <li>Scalable Solutions: Whether you need temporary staff for a project or permanent hires for long-term growth, we've got you covered.</li>
-              <li>Ongoing Support: We provide continuous support to ensure your workforce performs at its best.</li>
-            </ul>
-            <Button 
-              size="lg"
-              className="bg-[#F97316] hover:bg-[#F97316]/90 text-white text-lg px-8 py-6 h-auto"
-            >
-              See How We Work
-            </Button>
+
+      <section className="py-20 relative">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80")',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary/90 to-primary/80" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+                <h3 className="text-2xl font-bold text-white mb-6">Our Strategic Approach</h3>
+                <ul className="space-y-6">
+                  {[
+                    "Industry Expertise: Understanding healthcare complexities",
+                    "Talent Sourcing: Extensive professional network",
+                    "Rigorous Screening: Thorough candidate assessment",
+                    "Scalable Solutions: Flexible staffing options",
+                    "Ongoing Support: Continuous performance monitoring"
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-center gap-4 text-white">
+                      <span className="w-2 h-2 bg-[#F97316] rounded-full" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="order-1 md:order-2 text-white">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Our Proven Approach to Healthcare Staffing
+              </h2>
+              <p className="text-lg mb-8">
+                At Workist For IT, we take a strategic and customized approach to meet the unique needs of the healthcare sector.
+              </p>
+              <Button 
+                size="lg"
+                className="bg-[#F97316] hover:bg-[#F97316]/90 text-white text-lg px-8 py-6 h-auto"
+              >
+                See How We Work
+              </Button>
+            </div>
           </div>
         </div>
       </section>
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              Success Stories: Driving Excellence in Healthcare
-            </h2>
-            <p className="text-lg text-gray-800 max-w-3xl mx-auto mb-12">
-              Our solutions have helped healthcare organizations achieve remarkable results:
-            </p>
-            <ul className="list-disc list-inside text-lg text-gray-700 max-w-3xl mx-auto mb-12">
-              <li>Case Study 1: Provided a hospital with a team of nurses, reducing patient wait times by 30%.</li>
-              <li>Case Study 2: Recruited healthcare IT specialists for a clinic, improving EHR system efficiency by 25%.</li>
-              <li>Case Study 3: Staffed a compliance team for a healthcare provider, ensuring adherence to regulatory standards and reducing penalties by 20%.</li>
-            </ul>
+
+      <section className="py-20 relative">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80")',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-tr from-primary/95 to-primary/80" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+            Success Stories: Driving Excellence in Healthcare
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                metric: "30%",
+                title: "Reduced Wait Times",
+                description: "Provided a hospital with a team of nurses"
+              },
+              {
+                metric: "25%",
+                title: "Improved EHR Efficiency",
+                description: "Recruited healthcare IT specialists for a clinic"
+              },
+              {
+                metric: "20%",
+                title: "Reduced Penalties",
+                description: "Staffed a compliance team ensuring regulatory standards"
+              }
+            ].map((story, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center">
+                <div className="text-4xl font-bold text-[#F97316] mb-4">{story.metric}</div>
+                <h3 className="text-xl font-semibold text-white mb-4">{story.title}</h3>
+                <p className="text-white/90">{story.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
             <Button 
               size="lg"
               className="bg-[#F97316] hover:bg-[#F97316]/90 text-white text-lg px-8 py-6 h-auto"
@@ -109,25 +212,34 @@ const Healthcare = () => {
           </div>
         </div>
       </section>
-      <section className="py-20 bg-gradient-to-br from-white to-blue-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              Ready to Transform Your Healthcare Workforce?
-            </h2>
-            <p className="text-lg text-gray-800 max-w-3xl mx-auto mb-12">
-              At Workist For IT, we're committed to helping healthcare organizations build a workforce that drives efficiency and growth. 
-              Let's work together to find the talent and solutions that meet your unique needs. Contact us today to get started.
-            </p>
+
+      <section className="py-20 relative">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("https://images.unsplash.com/photo-1631217868264-e5b90bb4561c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80")',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/95 to-primary/80" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Healthcare Workforce?
+          </h2>
+          <p className="text-lg text-white max-w-3xl mx-auto mb-12">
+            At Workist For IT, we're committed to helping healthcare organizations build a workforce that drives efficiency and growth. 
+            Let's work together to find the talent and solutions that meet your unique needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg"
-              className="bg-[#F97316] hover:bg-[#F97316]/90 text-white text-lg px-8 py-6 h-auto mr-4"
+              className="bg-[#F97316] hover:bg-[#F97316]/90 text-white text-lg px-8 py-6 h-auto"
             >
               Contact Us Today
             </Button>
             <Button 
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6 h-auto"
+              className="bg-white hover:bg-white/90 text-primary text-lg px-8 py-6 h-auto"
             >
               Schedule a Consultation
             </Button>
