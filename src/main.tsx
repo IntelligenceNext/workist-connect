@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.tsx'
 import './index.css'
+import Index from './pages/Index.tsx'
 import NotFound from './pages/NotFound.tsx'
 import Healthcare from './pages/industries/Healthcare.tsx'
 import Automotive from './pages/industries/Automotive.tsx'
@@ -27,79 +28,85 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <NotFound />
-  },
-  {
-    path: "/industries/healthcare",
-    element: <Healthcare />
-  },
-  {
-    path: "/industries/automotive",
-    element: <Automotive />
-  },
-  {
-    path: "/industries/consumer-industrial",
-    element: <ConsumerIndustrial />
-  },
-  {
-    path: "/industries/construction-energy",
-    element: <ConstructionEnergy />
-  },
-  {
-    path: "/industries/government",
-    element: <Government />
-  },
-  {
-    path: "/industries/life-sciences",
-    element: <LifeSciences />
-  },
-  {
-    path: "/industries/logistics",
-    element: <Logistics />
-  },
-  {
-    path: "/industries/aviation",
-    element: <Aviation />
-  },
-  {
-    path: "/services/staffing",
-    element: <Staffing />
-  },
-  {
-    path: "/services/professional",
-    element: <Professional />
-  },
-  {
-    path: "/services/culture-consulting",
-    element: <CultureConsulting />
-  },
-  {
-    path: "/services/rpo",
-    element: <RPO />
-  },
-  {
-    path: "/services/deib",
-    element: <DEIB />
-  },
-  {
-    path: "/services/executive",
-    element: <Executive />
-  },
-  {
-    path: "/locations/us",
-    element: <US />
-  },
-  {
-    path: "/locations/india",
-    element: <India />
-  },
-  {
-    path: "/jobs/in-house",
-    element: <InHouse />
-  },
-  {
-    path: "/jobs/consultants",
-    element: <Consultants />
+    errorElement: <NotFound />,
+    children: [
+      {
+        index: true,
+        element: <Index />
+      },
+      {
+        path: "locations/india",
+        element: <India />
+      },
+      {
+        path: "locations/us",
+        element: <US />
+      },
+      {
+        path: "industries/healthcare",
+        element: <Healthcare />
+      },
+      {
+        path: "industries/automotive",
+        element: <Automotive />
+      },
+      {
+        path: "industries/consumer-industrial",
+        element: <ConsumerIndustrial />
+      },
+      {
+        path: "industries/construction-energy",
+        element: <ConstructionEnergy />
+      },
+      {
+        path: "industries/government",
+        element: <Government />
+      },
+      {
+        path: "industries/life-sciences",
+        element: <LifeSciences />
+      },
+      {
+        path: "industries/logistics",
+        element: <Logistics />
+      },
+      {
+        path: "industries/aviation",
+        element: <Aviation />
+      },
+      {
+        path: "services/staffing",
+        element: <Staffing />
+      },
+      {
+        path: "services/professional",
+        element: <Professional />
+      },
+      {
+        path: "services/culture-consulting",
+        element: <CultureConsulting />
+      },
+      {
+        path: "services/rpo",
+        element: <RPO />
+      },
+      {
+        path: "services/deib",
+        element: <DEIB />
+      },
+      {
+        path: "services/executive",
+        element: <Executive />
+      },
+      {
+        path: "jobs/in-house",
+        element: <InHouse />
+      },
+      {
+        path: "jobs/consultants",
+        element: <Consultants />
+      }
+    ]
   }
 ])
 
