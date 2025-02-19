@@ -2,24 +2,49 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Search } from "lucide-react";
+import { useState } from "react";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { Check } from "lucide-react";
 
 const HeroSection = () => {
+  const [openLocation, setOpenLocation] = useState(false);
+  const [selectedLocation, setSelectedLocation] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // Combined list of major cities from India and USA
   const locations = [
-    "Bangalore",
-    "Mumbai",
-    "Delhi NCR",
-    "Hyderabad",
-    "Chennai",
-    "Pune",
-    "Kolkata",
+    // India
+    { city: "Mumbai", country: "India", state: "Maharashtra" },
+    { city: "Delhi", country: "India", state: "Delhi" },
+    { city: "Bangalore", country: "India", state: "Karnataka" },
+    { city: "Hyderabad", country: "India", state: "Telangana" },
+    { city: "Chennai", country: "India", state: "Tamil Nadu" },
+    { city: "Kolkata", country: "India", state: "West Bengal" },
+    { city: "Pune", country: "India", state: "Maharashtra" },
+    // USA
+    { city: "New York", country: "USA", state: "New York" },
+    { city: "Los Angeles", country: "USA", state: "California" },
+    { city: "Chicago", country: "USA", state: "Illinois" },
+    { city: "Houston", country: "USA", state: "Texas" },
+    { city: "Phoenix", country: "USA", state: "Arizona" },
+    { city: "Philadelphia", country: "USA", state: "Pennsylvania" },
+    { city: "San Antonio", country: "USA", state: "Texas" },
+    { city: "San Diego", country: "USA", state: "California" },
+    { city: "Dallas", country: "USA", state: "Texas" },
+    { city: "San Jose", country: "USA", state: "California" }
   ];
 
   return (
@@ -60,18 +85,54 @@ const HeroSection = () => {
             
             <div className="space-y-2">
               <Label className="text-white">Location</Label>
-              <Select>
-                <SelectTrigger className="bg-white/20 border-white/20 text-white">
-                  <SelectValue placeholder="Select location" />
-                </SelectTrigger>
-                <SelectContent>
-                  {locations.map((location) => (
-                    <SelectItem key={location} value={location.toLowerCase()}>
-                      {location}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <Popover open={openLocation} onOpenChange={setOpenLocation}>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    role="combobox"
+                    aria-expanded={openLocation}
+                    className="w-full justify-between bg-white/20 border-white/20 text-white hover:bg-white/30 hover:text-white"
+                  >
+                    {selectedLocation || "Select location..."}
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-[300px] p-0" align="start">
+                  <Command>
+                    <CommandInput 
+                      placeholder="Search location..." 
+                      value={searchQuery}
+                      onValueChange={setSearchQuery}
+                    />
+                    <CommandList>
+                      <CommandEmpty>No location found.</CommandEmpty>
+                      <CommandGroup>
+                        {locations
+                          .filter(location => 
+                            location.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                            location.state.toLowerCase().includes(searchQuery.toLowerCase())
+                          )
+                          .map((location) => (
+                            <CommandItem
+                              key={`${location.city}-${location.state}`}
+                              value={`${location.city}, ${location.state}`}
+                              onSelect={(currentValue) => {
+                                setSelectedLocation(currentValue);
+                                setOpenLocation(false);
+                              }}
+                            >
+                              <Check
+                                className={`mr-2 h-4 w-4 ${
+                                  selectedLocation === `${location.city}, ${location.state}` ? "opacity-100" : "opacity-0"
+                                }`}
+                              />
+                              {location.city}, {location.state}, {location.country}
+                            </CommandItem>
+                          ))}
+                      </CommandGroup>
+                    </CommandList>
+                  </Command>
+                </PopoverContent>
+              </Popover>
             </div>
 
             <div className="flex items-end">
