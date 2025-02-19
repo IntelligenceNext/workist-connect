@@ -47,6 +47,14 @@ const HeroSection = () => {
     { city: "San Jose", country: "USA", state: "California" }
   ];
 
+  // Filter locations only when there's a search query
+  const filteredLocations = searchQuery
+    ? locations.filter(location => 
+        location.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        location.state.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : [];
+
   return (
     <div className="relative min-h-[600px] pt-[15vh] pb-20 px-4 overflow-hidden">
       {/* Background Image with Overlay */}
@@ -93,31 +101,28 @@ const HeroSection = () => {
                     aria-expanded={openLocation}
                     className="w-full justify-between bg-white/20 border-white/20 text-white hover:bg-white/30 hover:text-white"
                   >
-                    {selectedLocation || "Select location..."}
+                    {selectedLocation || "Enter location..."}
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-[300px] p-0" align="start">
                   <Command>
                     <CommandInput 
-                      placeholder="Search location..." 
+                      placeholder="Type to search locations..." 
                       value={searchQuery}
                       onValueChange={setSearchQuery}
                     />
                     <CommandList>
                       <CommandEmpty>No location found.</CommandEmpty>
-                      <CommandGroup>
-                        {locations
-                          .filter(location => 
-                            location.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                            location.state.toLowerCase().includes(searchQuery.toLowerCase())
-                          )
-                          .map((location) => (
+                      {searchQuery && (
+                        <CommandGroup>
+                          {filteredLocations.map((location) => (
                             <CommandItem
                               key={`${location.city}-${location.state}`}
                               value={`${location.city}, ${location.state}`}
                               onSelect={(currentValue) => {
                                 setSelectedLocation(currentValue);
                                 setOpenLocation(false);
+                                setSearchQuery("");
                               }}
                             >
                               <Check
@@ -128,7 +133,8 @@ const HeroSection = () => {
                               {location.city}, {location.state}, {location.country}
                             </CommandItem>
                           ))}
-                      </CommandGroup>
+                        </CommandGroup>
+                      )}
                     </CommandList>
                   </Command>
                 </PopoverContent>
