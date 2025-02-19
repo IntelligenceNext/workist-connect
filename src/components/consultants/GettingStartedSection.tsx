@@ -27,13 +27,13 @@ const GettingStartedSection = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
             Getting Started
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
             Joining Workist For IT is simple. Whether you're an experienced consultant 
             or a fresh talent, we guide you through every step.
           </p>
@@ -43,7 +43,7 @@ const GettingStartedSection = () => {
           {steps.map((step, index) => (
             <div 
               key={index}
-              className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
             >
               <div className="p-3 bg-accent/10 rounded-lg inline-block mb-4">
                 {step.icon}
@@ -51,7 +51,7 @@ const GettingStartedSection = () => {
               <h3 className="text-xl font-semibold text-primary mb-3">
                 {step.title}
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-gray-600">
                 {step.description}
               </p>
             </div>
@@ -61,7 +61,7 @@ const GettingStartedSection = () => {
         <div className="text-center mt-12">
           <Button 
             size="lg"
-            className="bg-accent hover:bg-accent/90"
+            className="bg-accent hover:bg-accent/90 text-white"
           >
             Start Your Journey
           </Button>

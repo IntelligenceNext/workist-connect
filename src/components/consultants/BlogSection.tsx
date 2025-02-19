@@ -26,13 +26,13 @@ const BlogSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-[#F6F6F7]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
             Latest from Our Blog
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Stay informed with industry insights, career advice, success stories, and 
             the latest trends in recruitment, training, and IT development.
           </p>
@@ -40,21 +40,21 @@ const BlogSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow bg-white">
               <img
                 src={post.image}
                 alt={post.title}
                 className="w-full h-48 object-cover"
               />
               <CardContent className="p-6">
-                <div className="flex justify-between items-center text-sm text-muted-foreground mb-3">
+                <div className="flex justify-between items-center text-sm text-gray-500 mb-3">
                   <span>{post.category}</span>
                   <span>{post.date}</span>
                 </div>
                 <h3 className="text-xl font-semibold text-primary mb-4">
                   {post.title}
                 </h3>
-                <Button variant="link" className="p-0 h-auto text-accent">
+                <Button variant="link" className="p-0 h-auto text-accent hover:text-accent/90">
                   Read More <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>

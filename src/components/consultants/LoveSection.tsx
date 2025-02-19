@@ -22,7 +22,7 @@ const LoveSection = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-block p-3 bg-accent/10 rounded-full mb-6">
@@ -31,7 +31,7 @@ const LoveSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
             Nothing but Love
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             We take pride in the journeys we've shaped. Our consultants have found 
             opportunities at leading organizations and built rewarding careers.
           </p>
@@ -39,14 +39,14 @@ const LoveSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
+            <Card key={index} className="hover:shadow-lg transition-shadow border border-gray-100">
               <CardContent className="pt-6">
-                <blockquote className="text-lg text-muted-foreground mb-6">
+                <blockquote className="text-lg text-gray-600 mb-6">
                   "{testimonial.quote}"
                 </blockquote>
                 <div>
                   <p className="font-semibold text-primary">{testimonial.author}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                  <p className="text-sm text-gray-500">{testimonial.role}</p>
                 </div>
               </CardContent>
             </Card>

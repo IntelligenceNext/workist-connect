@@ -27,13 +27,13 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-[#F6F6F7]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Navigating your career can come with many questions. We've compiled some of the 
             most common queries from our consultants to make things easier.
           </p>
@@ -43,10 +43,10 @@ const FAQSection = () => {
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left">
+                <AccordionTrigger className="text-left text-primary">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent>
+                <AccordionContent className="text-gray-600">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
