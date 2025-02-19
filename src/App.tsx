@@ -22,6 +22,7 @@ import RPO from "./pages/services/RPO";
 import DEIB from "./pages/services/DEIB";
 import Executive from "./pages/services/Executive";
 import US from "./pages/locations/US";
+import Consultants from "./pages/jobs/Consultants";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +47,7 @@ const App = () => (
         <Route path="/services/rpo" element={<RPO />} />
         <Route path="/services/deib" element={<DEIB />} />
         <Route path="/services/executive" element={<Executive />} />
+        <Route path="/jobs/consultants" element={<Consultants />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Toaster />

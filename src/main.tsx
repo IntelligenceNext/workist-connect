@@ -21,6 +21,7 @@ import Executive from './pages/services/Executive.tsx'
 import US from './pages/locations/US.tsx'
 import India from './pages/locations/India.tsx'
 import InHouse from './pages/jobs/InHouse.tsx'
+import Consultants from './pages/jobs/Consultants.tsx'
 
 const router = createBrowserRouter([
   {
@@ -95,6 +96,10 @@ const router = createBrowserRouter([
   {
     path: "/jobs/in-house",
     element: <InHouse />
+  },
+  {
+    path: "/jobs/consultants",
+    element: <Consultants />
   }
 ])
 
