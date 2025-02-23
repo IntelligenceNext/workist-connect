@@ -24,6 +24,7 @@ import InHouse from './pages/jobs/InHouse.tsx'
 import Consultants from './pages/jobs/Consultants.tsx'
 import BeTheLight from './pages/jobs/BeTheLight.tsx'
 import WorkplaceManagement from './pages/resources/WorkplaceManagement.tsx'
+import MarketTrends from './pages/resources/MarketTrends.tsx'
 
 const router = createBrowserRouter([
   {
@@ -114,6 +115,10 @@ const router = createBrowserRouter([
       {
         path: "resources/workplace-management",
         element: <WorkplaceManagement />
+      },
+      {
+        path: "resources/market-trends",
+        element: <MarketTrends />
       }
     ]
   }
