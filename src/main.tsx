@@ -23,6 +23,7 @@ import US from './pages/locations/US.tsx'
 import India from './pages/locations/India.tsx'
 import InHouse from './pages/jobs/InHouse.tsx'
 import Consultants from './pages/jobs/Consultants.tsx'
+import BeTheLight from './pages/jobs/BeTheLight.tsx'
 
 const router = createBrowserRouter([
   {
@@ -105,6 +106,10 @@ const router = createBrowserRouter([
       {
         path: "jobs/consultants",
         element: <Consultants />
+      },
+      {
+        path: "jobs/be-the-light",
+        element: <BeTheLight />
       }
     ]
   }
