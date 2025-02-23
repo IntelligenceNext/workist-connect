@@ -1,32 +1,32 @@
 
-import { ListFilter, Users, Lightbulb, PhoneCall, UserPlus } from "lucide-react";
+import { CheckSquare, Users, Brain, PhoneCall, UserPlus } from "lucide-react";
 
 const EvaluationSection = () => {
   const tips = [
     {
-      icon: <ListFilter className="h-8 w-8 text-white" />,
-      title: "Use Structured Interviews",
-      description: "Ask consistent questions to all candidates to ensure fair comparisons."
+      icon: <CheckSquare className="h-8 w-8 text-white" />,
+      title: "Structured Interviews",
+      description: "Ask consistent questions to ensure fair comparisons"
     },
     {
       icon: <Users className="h-8 w-8 text-white" />,
-      title: "Assess Cultural Fit",
-      description: "Evaluate how well candidates align with your company's values and culture."
+      title: "Cultural Fit",
+      description: "Evaluate alignment with company values"
     },
     {
-      icon: <Lightbulb className="h-8 w-8 text-white" />,
-      title: "Test Skills",
-      description: "Use practical tests or assignments to assess technical and problem-solving abilities."
+      icon: <Brain className="h-8 w-8 text-white" />,
+      title: "Skills Assessment",
+      description: "Use practical tests to verify capabilities"
     },
     {
       icon: <PhoneCall className="h-8 w-8 text-white" />,
-      title: "Check References",
-      description: "Verify the candidate's experience and performance with previous employers."
+      title: "Reference Checks",
+      description: "Verify experience and performance"
     },
     {
       icon: <UserPlus className="h-8 w-8 text-white" />,
-      title: "Involve the Team",
-      description: "Include team members in the interview process for diverse perspectives."
+      title: "Team Involvement",
+      description: "Include team members in the process"
     }
   ];
 
@@ -61,4 +61,3 @@ const EvaluationSection = () => {
 };
 
 export default EvaluationSection;
-

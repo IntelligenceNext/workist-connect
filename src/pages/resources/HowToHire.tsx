@@ -7,19 +7,20 @@ import ExpertiseSection from "@/components/how-to-hire/ExpertiseSection";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const HowToHire = () => {
+const HowToHirePage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <HeroSection />
-      <KeyStepsSection />
-      <EvaluationSection />
-      <ChallengesSection />
-      <ExpertiseSection />
+      <main className="flex-grow">
+        <HeroSection />
+        <KeyStepsSection />
+        <EvaluationSection />
+        <ChallengesSection />
+        <ExpertiseSection />
+      </main>
       <Footer />
     </div>
   );
 };
 
-export default HowToHire;
-
+export default HowToHirePage;

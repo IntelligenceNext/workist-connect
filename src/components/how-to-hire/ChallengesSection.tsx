@@ -6,32 +6,32 @@ const ChallengesSection = () => {
     {
       icon: <UserX className="h-8 w-8 text-accent" />,
       title: "Talent Shortages",
-      description: "Expand your search to include passive candidates and leverage professional networks.",
-      bgClass: "bg-orange-50"
+      problem: "Limited pool of qualified candidates",
+      solution: "Expand search to include passive candidates and leverage professional networks"
     },
     {
       icon: <Clock className="h-8 w-8 text-accent" />,
       title: "Time Constraints",
-      description: "Use technology, such as applicant tracking systems (ATS), to streamline the process.",
-      bgClass: "bg-blue-50"
+      problem: "Long hiring processes",
+      solution: "Use applicant tracking systems (ATS) to streamline the process"
     },
     {
       icon: <RefreshCcw className="h-8 w-8 text-accent" />,
-      title: "High Turnover Rates",
-      description: "Focus on cultural fit and career growth opportunities to retain top talent.",
-      bgClass: "bg-green-50"
+      title: "High Turnover",
+      problem: "Difficulty retaining talent",
+      solution: "Focus on cultural fit and career growth opportunities"
     },
     {
       icon: <Shield className="h-8 w-8 text-accent" />,
       title: "Bias in Hiring",
-      description: "Implement blind recruitment practices and structured interviews to reduce bias.",
-      bgClass: "bg-purple-50"
+      problem: "Unconscious bias affecting decisions",
+      solution: "Implement blind recruitment and structured interviews"
     },
     {
       icon: <Target className="h-8 w-8 text-accent" />,
-      title: "Competition for Talent",
-      description: "Offer competitive compensation packages and highlight your unique value proposition.",
-      bgClass: "bg-red-50"
+      title: "Competition",
+      problem: "High competition for top talent",
+      solution: "Offer competitive packages and highlight unique value proposition"
     }
   ];
 
@@ -46,17 +46,22 @@ const ChallengesSection = () => {
           {challenges.map((challenge, index) => (
             <div 
               key={index}
-              className={`${challenge.bgClass} p-8 rounded-xl transition-transform hover:-translate-y-1`}
+              className="bg-gray-50 p-6 rounded-xl"
             >
-              <div className="inline-block mb-4 bg-white p-4 rounded-full shadow-sm">
+              <div className="mb-4 bg-primary/5 p-4 rounded-full w-fit">
                 {challenge.icon}
               </div>
               <h3 className="text-xl font-semibold mb-3 text-primary">
                 {challenge.title}
               </h3>
-              <p className="text-muted">
-                {challenge.description}
+              <p className="text-muted mb-4">
+                {challenge.problem}
               </p>
+              <div className="bg-white p-4 rounded-lg">
+                <p className="text-sm text-accent font-medium">
+                  Solution: {challenge.solution}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -66,4 +71,3 @@ const ChallengesSection = () => {
 };
 
 export default ChallengesSection;
-

@@ -1,49 +1,49 @@
 
-import { ScrollText, Users, ClipboardCheck, MessageSquare, CheckCircle } from "lucide-react";
+import { FileText, Users, MessageSquare, CheckCircle, ClipboardList } from "lucide-react";
 
 const KeyStepsSection = () => {
   const steps = [
     {
-      icon: <ScrollText className="h-8 w-8 text-accent" />,
+      icon: <FileText className="h-8 w-8 text-accent" />,
       title: "Define the Role",
-      description: "Clearly outline the job responsibilities, qualifications, and skills required."
+      description: "Clearly outline job responsibilities, qualifications, and required skills."
     },
     {
       icon: <Users className="h-8 w-8 text-accent" />,
       title: "Source Candidates",
-      description: "Use multiple channels to attract a diverse pool of applicants."
+      description: "Utilize multiple channels to attract a diverse pool of applicants."
     },
     {
-      icon: <ClipboardCheck className="h-8 w-8 text-accent" />,
+      icon: <ClipboardList className="h-8 w-8 text-accent" />,
       title: "Screen Resumes",
-      description: "Evaluate resumes and applications to shortlist candidates who meet your criteria."
+      description: "Evaluate applications to shortlist qualified candidates."
     },
     {
       icon: <MessageSquare className="h-8 w-8 text-accent" />,
       title: "Conduct Interviews",
-      description: "Use behavioral, technical, and cultural fit interviews to assess candidates."
+      description: "Use behavioral, technical, and cultural fit interviews."
     },
     {
       icon: <CheckCircle className="h-8 w-8 text-accent" />,
       title: "Make an Offer",
-      description: "Extend a competitive offer and ensure a smooth onboarding process."
+      description: "Extend competitive offers and ensure smooth onboarding."
     }
   ];
 
   return (
-    <section className="py-16 px-4">
+    <section className="py-16 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
           Key Steps in the Hiring Process
         </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <div 
               key={index}
-              className="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
             >
-              <div className="inline-block mb-4 bg-primary/5 p-4 rounded-full">
+              <div className="mb-4 bg-primary/5 p-4 rounded-full w-fit">
                 {step.icon}
               </div>
               <h3 className="text-xl font-semibold mb-3 text-primary">
@@ -61,4 +61,3 @@ const KeyStepsSection = () => {
 };
 
 export default KeyStepsSection;
-
