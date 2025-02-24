@@ -25,8 +25,8 @@ const CaseStudiesSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-20 px-8 border-t border-gray-200">
+      <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
           Case Studies and Success Stories
         </h2>
@@ -35,10 +35,10 @@ const CaseStudiesSection = () => {
           {cases.map((caseStudy, index) => (
             <div 
               key={index}
-              className="bg-gray-50 p-8 rounded-xl"
+              className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow"
             >
               <div className="flex items-center gap-2 mb-4">
-                <CheckCircle2 className="h-6 w-6 text-[#F97316]" />
+                <CheckCircle2 className="h-6 w-6 text-accent" />
                 <span className="text-sm font-medium text-muted-foreground">
                   {caseStudy.industry}
                 </span>
@@ -46,7 +46,7 @@ const CaseStudiesSection = () => {
               <h3 className="text-xl font-semibold mb-2 text-primary">
                 {caseStudy.title}
               </h3>
-              <p className="text-lg font-semibold text-[#F97316] mb-4">
+              <p className="text-lg font-semibold text-accent mb-4">
                 {caseStudy.result}
               </p>
               <p className="text-muted-foreground">
