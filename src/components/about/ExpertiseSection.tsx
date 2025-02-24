@@ -33,7 +33,7 @@ const ExpertiseSection = () => {
   return (
     <section className="py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-primary mb-16">
+        <h2 className="text-4xl font-bold text-center text-[#1A1F2C] mb-16">
           Our Expertise
         </h2>
 
@@ -41,15 +41,15 @@ const ExpertiseSection = () => {
           {expertiseItems.map((item, index) => (
             <div 
               key={index}
-              className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+              className="bg-[#F1F0FB] p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
             >
               <div className="inline-block mb-4 bg-white p-4 rounded-full shadow-sm">
                 {item.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-primary">
+              <h3 className="text-xl font-semibold mb-3 text-[#222222]">
                 {item.title}
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-[#403E43]">
                 {item.description}
               </p>
             </div>
@@ -57,7 +57,7 @@ const ExpertiseSection = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-[#403E43] max-w-3xl mx-auto">
             With years of experience and collaborations with over 100 top multinational 
             companies (MNCs), Workist For IT has established itself as a trusted partner 
             in the IT and workforce solutions industry.

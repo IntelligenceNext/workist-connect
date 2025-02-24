@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const milestones = [
   {
-    icon: <Calendar className="h-6 w-6 text-white" />,
+    icon: <Calendar className="h-6 w-6 text-accent" />,
     year: "2017",
     title: "Founded",
     description: "Establishment of Workist For IT by Mylapaka Narsimha."
@@ -31,9 +31,9 @@ const milestones = [
 
 const JourneySection = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-primary to-primary-dark text-white">
+    <section className="py-20 px-4 bg-gradient-to-br from-primary to-primary-dark">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-16">
+        <h2 className="text-4xl font-bold text-center mb-16 text-white">
           Our Journey
         </h2>
 
@@ -41,15 +41,15 @@ const JourneySection = () => {
           {milestones.map((milestone, index) => (
             <Card 
               key={index}
-              className="bg-black/20 backdrop-blur-sm border-white/20 hover:bg-black/30 transition-colors"
+              className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-colors"
             >
               <CardContent className="p-6">
-                <div className="bg-white/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                <div className="bg-white/20 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                   {milestone.icon}
                 </div>
                 <div className="text-2xl font-bold mb-2 text-white">{milestone.year}</div>
-                <h3 className="text-xl font-semibold mb-3 text-white">{milestone.title}</h3>
-                <p className="text-white/90">
+                <h3 className="text-xl font-semibold mb-3 text-white/90">{milestone.title}</h3>
+                <p className="text-white/80">
                   {milestone.description}
                 </p>
               </CardContent>

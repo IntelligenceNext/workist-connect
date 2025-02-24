@@ -31,9 +31,9 @@ const values = [
 
 const ValuesSection = () => {
   return (
-    <section className="py-20 px-4 bg-gray-50">
+    <section className="py-20 px-4 bg-[#F1F0FB]">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-primary mb-16">
+        <h2 className="text-4xl font-bold text-center text-[#1A1F2C] mb-16">
           Our Values
         </h2>
 
@@ -46,10 +46,10 @@ const ValuesSection = () => {
               <div className="bg-primary/5 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                 {value.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-primary">
+              <h3 className="text-xl font-semibold mb-3 text-[#222222]">
                 {value.title}
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-[#403E43]">
                 {value.description}
               </p>
             </div>
