@@ -31,7 +31,7 @@ const values = [
 
 const ValuesSection = () => {
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-20 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-primary mb-16">
           Our Values
@@ -41,9 +41,9 @@ const ValuesSection = () => {
           {values.map((value, index) => (
             <div 
               key={index}
-              className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
             >
-              <div className="bg-white w-12 h-12 rounded-full flex items-center justify-center mb-4 shadow-md">
+              <div className="bg-primary/5 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                 {value.icon}
               </div>
               <h3 className="text-xl font-semibold mb-3 text-primary">

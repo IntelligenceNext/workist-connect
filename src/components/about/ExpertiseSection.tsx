@@ -3,27 +3,27 @@ import { Users, Code, BarChart, Building2, Globe } from "lucide-react";
 
 const expertiseItems = [
   {
-    icon: <Users className="h-6 w-6" />,
+    icon: <Users className="h-6 w-6 text-primary" />,
     title: "IT Staffing",
     description: "Providing skilled professionals for temporary, permanent, and project-based roles."
   },
   {
-    icon: <Code className="h-6 w-6" />,
+    icon: <Code className="h-6 w-6 text-primary" />,
     title: "Technology Solutions",
     description: "Delivering innovative IT solutions tailored to your business needs."
   },
   {
-    icon: <BarChart className="h-6 w-6" />,
+    icon: <BarChart className="h-6 w-6 text-primary" />,
     title: "Workforce Optimization",
     description: "Helping organizations streamline operations and improve efficiency."
   },
   {
-    icon: <Building2 className="h-6 w-6" />,
+    icon: <Building2 className="h-6 w-6 text-primary" />,
     title: "Industry-Specific Solutions",
     description: "Customized services for sectors like healthcare, manufacturing, retail, and more."
   },
   {
-    icon: <Globe className="h-6 w-6" />,
+    icon: <Globe className="h-6 w-6 text-primary" />,
     title: "Global Reach",
     description: "Serving clients across the globe with a focus on quality and excellence."
   }
@@ -31,7 +31,7 @@ const expertiseItems = [
 
 const ExpertiseSection = () => {
   return (
-    <section className="py-20 px-4 bg-gray-50">
+    <section className="py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-primary mb-16">
           Our Expertise
@@ -41,9 +41,9 @@ const ExpertiseSection = () => {
           {expertiseItems.map((item, index) => (
             <div 
               key={index}
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+              className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
             >
-              <div className="inline-block mb-4 bg-primary/5 p-4 rounded-full">
+              <div className="inline-block mb-4 bg-white p-4 rounded-full shadow-sm">
                 {item.icon}
               </div>
               <h3 className="text-xl font-semibold mb-3 text-primary">
