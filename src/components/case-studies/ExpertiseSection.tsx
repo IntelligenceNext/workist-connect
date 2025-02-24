@@ -31,9 +31,9 @@ const ExpertiseSection = () => {
   ];
 
   return (
-    <section className="py-16 px-4 bg-primary">
+    <section className="py-16 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
           Our Expertise in Case Studies
         </h2>
 
@@ -41,15 +41,15 @@ const ExpertiseSection = () => {
           {expertise.map((item, index) => (
             <div 
               key={index}
-              className="bg-primary-dark p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-white/10"
+              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="mb-6 bg-white/5 p-4 rounded-full w-fit">
+              <div className="mb-6 bg-primary/5 p-4 rounded-full w-fit">
                 {item.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">
+              <h3 className="text-xl font-semibold mb-4 text-primary">
                 {item.title}
               </h3>
-              <p className="text-white/80">
+              <p className="text-muted-foreground">
                 {item.description}
               </p>
             </div>

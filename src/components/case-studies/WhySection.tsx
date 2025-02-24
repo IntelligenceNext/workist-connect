@@ -4,36 +4,36 @@ import { Lightbulb, BookOpen, ChartBar, Target, Award } from "lucide-react";
 const WhySection = () => {
   const reasons = [
     {
-      icon: <BookOpen className="h-8 w-8 text-accent" />,
+      icon: <BookOpen className="h-8 w-8 text-primary" />,
       title: "Practical Insights",
       description: "Learn from real examples of successful implementations."
     },
     {
-      icon: <Target className="h-8 w-8 text-accent" />,
+      icon: <Target className="h-8 w-8 text-primary" />,
       title: "Problem-Solving",
       description: "Discover how other organizations have overcome similar challenges."
     },
     {
-      icon: <Lightbulb className="h-8 w-8 text-accent" />,
+      icon: <Lightbulb className="h-8 w-8 text-primary" />,
       title: "Inspiration",
       description: "Gain ideas and strategies that can be applied to your own business."
     },
     {
-      icon: <Award className="h-8 w-8 text-accent" />,
+      icon: <Award className="h-8 w-8 text-primary" />,
       title: "Credibility",
       description: "Understand the proven impact of workforce solutions through documented success stories."
     },
     {
-      icon: <ChartBar className="h-8 w-8 text-accent" />,
+      icon: <ChartBar className="h-8 w-8 text-primary" />,
       title: "Decision-Making",
       description: "Use case studies to inform and validate your strategic decisions."
     }
   ];
 
   return (
-    <section className="py-16 px-8 border-t border-white/10 bg-primary">
+    <section className="py-16 px-8 border-t border-gray-200">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
           Why Case Studies Matter
         </h2>
 
@@ -41,15 +41,15 @@ const WhySection = () => {
           {reasons.map((reason, index) => (
             <div 
               key={index}
-              className="bg-primary-dark p-6 rounded-lg hover:shadow-md transition-shadow border border-white/10"
+              className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow"
             >
-              <div className="mb-6 bg-white/5 p-4 rounded-full w-fit">
+              <div className="mb-6 bg-white p-4 rounded-full w-fit">
                 {reason.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-white">
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">
                 {reason.title}
               </h3>
-              <p className="text-white/80">
+              <p className="text-gray-600">
                 {reason.description}
               </p>
             </div>
