@@ -9,7 +9,7 @@ import HighlightedSection from "@/components/case-studies/HighlightedSection";
 
 const CaseStudies = () => {
   return (
-    <div className="h-screen flex flex-col bg-gray-100">
+    <div className="h-screen flex flex-col bg-primary">
       <Navbar />
       <main className="flex-grow">
         <div className="h-full">
