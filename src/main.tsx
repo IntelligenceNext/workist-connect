@@ -27,6 +27,7 @@ import BeTheLight from './pages/jobs/BeTheLight.tsx'
 import WorkplaceManagement from './pages/resources/WorkplaceManagement.tsx'
 import MarketTrends from './pages/resources/MarketTrends.tsx'
 import HowToHire from './pages/resources/HowToHire.tsx'
+import WhitePapers from './pages/resources/WhitePapers.tsx'
 
 const router = createBrowserRouter([
   {
@@ -125,6 +126,10 @@ const router = createBrowserRouter([
       {
         path: "resources/how-to-hire",
         element: <HowToHire />
+      },
+      {
+        path: "resources/white-papers",
+        element: <WhitePapers />
       }
     ]
   }
