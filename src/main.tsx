@@ -1,3 +1,4 @@
+
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.tsx'
@@ -25,6 +26,7 @@ import Consultants from './pages/jobs/Consultants.tsx'
 import BeTheLight from './pages/jobs/BeTheLight.tsx'
 import WorkplaceManagement from './pages/resources/WorkplaceManagement.tsx'
 import MarketTrends from './pages/resources/MarketTrends.tsx'
+import HowToHire from './pages/resources/HowToHire.tsx'
 
 const router = createBrowserRouter([
   {
@@ -119,6 +121,10 @@ const router = createBrowserRouter([
       {
         path: "resources/market-trends",
         element: <MarketTrends />
+      },
+      {
+        path: "resources/how-to-hire",
+        element: <HowToHire />
       }
     ]
   }
