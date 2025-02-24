@@ -1,10 +1,10 @@
-
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.tsx'
 import './index.css'
 import Index from './pages/Index.tsx'
 import NotFound from './pages/NotFound.tsx'
+import About from './pages/About.tsx'
 import Healthcare from './pages/industries/Healthcare.tsx'
 import Automotive from './pages/industries/Automotive.tsx'
 import ConsumerIndustrial from './pages/industries/ConsumerIndustrial.tsx'
@@ -39,6 +39,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Index />
+      },
+      {
+        path: "about",
+        element: <About />
       },
       {
         path: "locations/india",
