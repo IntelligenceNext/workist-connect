@@ -8,23 +8,23 @@ const TrustedBy = () => {
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"
-            alt="IBM"
+            src="/lovable-uploads/064f73f6-b38c-4a7d-8bab-da968df08efc.png"
+            alt="CodeCraft"
             className="h-12 object-contain opacity-70 hover:opacity-100 transition-opacity"
           />
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg"
-            alt="Accenture"
+            src="/lovable-uploads/ae617571-885e-4d27-ae00-fd4e7624b3f3.png"
+            alt="Sonata Software"
             className="h-12 object-contain opacity-70 hover:opacity-100 transition-opacity"
           />
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Tata_Consultancy_Services_Logo.svg"
-            alt="TCS"
+            src="/lovable-uploads/04a29885-37bc-460e-b36d-fbc362035172.png"
+            alt="Persistent"
             className="h-12 object-contain opacity-70 hover:opacity-100 transition-opacity"
           />
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg"
-            alt="Wipro"
+            src="/lovable-uploads/6ca7a04e-19e6-40bf-a5d6-61d3977ba1f0.png"
+            alt="ValueLabs"
             className="h-12 object-contain opacity-70 hover:opacity-100 transition-opacity"
           />
         </div>

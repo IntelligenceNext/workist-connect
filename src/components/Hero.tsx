@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -99,23 +100,23 @@ const Hero = () => {
             <p className="text-white/80 mb-8 text-sm uppercase tracking-wider">Trusted By</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"
-                alt="IBM"
+                src="/lovable-uploads/064f73f6-b38c-4a7d-8bab-da968df08efc.png"
+                alt="CodeCraft"
                 className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg"
-                alt="Accenture"
+                src="/lovable-uploads/ae617571-885e-4d27-ae00-fd4e7624b3f3.png"
+                alt="Sonata Software"
                 className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg"
-                alt="TATA"
+                src="/lovable-uploads/04a29885-37bc-460e-b36d-fbc362035172.png"
+                alt="Persistent"
                 className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg"
-                alt="Wipro"
+                src="/lovable-uploads/6ca7a04e-19e6-40bf-a5d6-61d3977ba1f0.png"
+                alt="ValueLabs"
                 className="h-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
             </div>
