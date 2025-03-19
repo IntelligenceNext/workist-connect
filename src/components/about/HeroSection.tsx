@@ -41,7 +41,7 @@ const HeroSection = () => {
         <div className="flex flex-col md:flex-row gap-8 items-center max-w-6xl mx-auto">
           <div className="md:w-1/3">
             <img
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              src="/lovable-uploads/563b22bf-7d67-490d-a3d2-e58b04f69936.png"
               alt="Mylapaka Narsimha"
               className="rounded-2xl shadow-xl"
             />
