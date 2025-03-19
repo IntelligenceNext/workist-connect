@@ -44,15 +44,30 @@ const ContactFormSection = () => {
       const fileName = `${Math.random().toString(36).substring(2, 15)}.${fileExt}`;
       const filePath = `${fileName}`;
 
+      // Create a function to update progress
+      const handleProgress = (progress: number) => {
+        setUploadProgress(progress);
+      };
+
+      // Set up upload with manual progress tracking
+      let uploadProgress = 0;
+      const interval = setInterval(() => {
+        uploadProgress += 5;
+        if (uploadProgress <= 95) {
+          handleProgress(uploadProgress);
+        }
+      }, 100);
+
       const { error: uploadError, data } = await supabase.storage
         .from('contact-attachments')
         .upload(filePath, file, {
           cacheControl: '3600',
-          upsert: false,
-          onUploadProgress: (progress) => {
-            setUploadProgress(Math.round((progress.loaded / progress.total) * 100));
-          },
+          upsert: false
         });
+
+      // Clear interval and set to 100% when done
+      clearInterval(interval);
+      handleProgress(100);
 
       if (uploadError) {
         console.error('Error uploading file:', uploadError);
