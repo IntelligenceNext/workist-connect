@@ -20,7 +20,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <a href="/" className="flex-shrink-0 flex items-center">
               <img 
-                src="https://workistforit.in/images/logo.png" 
+                src="/lovable-uploads/5bb83aa3-6a22-4db1-b301-7b9b5b2084e5.png" 
                 alt="Workist Logo" 
                 className="h-8 w-auto"
               />

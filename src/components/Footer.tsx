@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Facebook, Linkedin, Youtube, Twitter, Instagram } from "lucide-react";
 
@@ -10,7 +11,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <Link to="/" className="mb-6">
               <img
-                src="https://workistforit.in/images/logo.png"
+                src="/lovable-uploads/5bb83aa3-6a22-4db1-b301-7b9b5b2084e5.png"
                 alt="Workist For IT"
                 className="h-16 w-auto"
               />
